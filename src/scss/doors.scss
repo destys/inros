@@ -1,0 +1,116 @@
+.door-install {
+    padding: rem(30) rem(15);
+    @include adaptiveValue("padding-left", 160, 15, 1920, 1600, 1);
+
+    @media (min-width: $pc) {
+        padding: rem(79) rem(15) rem(50);
+    }
+
+    &._reverse {
+        background: #f2f2f2;
+        padding-left: rem(15);
+        @include adaptiveValue("padding-right", 160, 15, 1920, 1600, 1);
+    }
+
+    // .door-install__list
+    &__list {
+        @include gridCards(fit, rem(250), 1fr, rem(20));
+
+        @media (min-width: em(1280)) {
+            display: flex;
+            align-items: center;
+            gap: rem(20);
+        }
+
+        @media (min-width: $pc) {
+            ._reverse & {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    // .door-install__item
+    &__item {
+        flex: 0 0 24%;
+
+        &:first-child {
+            margin-bottom: rem(20);
+            @include adaptiveValue("margin-right", 55, 0, 1920, 1600, 1);
+
+            @media (min-width: em(1280)) {
+                margin-bottom: rem(0);
+            }
+
+            @media (min-width: $pc) {
+                flex: 0 0 24%;
+                ._reverse & {
+                    margin-right: 0;
+                    @include adaptiveValue("margin-left", 55, 0, 1920, 1600, 1);
+                }
+            }
+        }
+    }
+}
+
+.item-door-install {
+    // .item-door-install__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 38, 15);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 13);
+        text-transform: uppercase;
+    }
+
+    // .item-door-install__text
+    &__text {
+        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 8);
+    }
+
+    // .item-door-install__image
+    &__image {
+        margin-bottom: rem(17);
+        width: 100%;
+        height: rem(437);
+        @include adaptiveValue("height", 437, 250);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .item-door-install__name
+    &__name {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 18, 10);
+    }
+
+    // .item-door-install__price
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(5);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 21, 11);
+        color: $blue;
+        line-height: 1;
+
+        span {
+            &:last-child {
+                text-decoration: line-through;
+                font-weight: 400;
+                @include adaptiveValue("font-size", 15, 7);
+                color: $mainColor;
+            }
+        }
+    }
+
+    // .item-door-install__credit
+    &__credit {
+        font-size: rem(13);
+        @include adaptiveValue("font-size", 13, 6);
+        color: $blue;
+    }
+}

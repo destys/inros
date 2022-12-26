@@ -1,0 +1,830 @@
+.quiz {
+    @include adaptiveValue("margin-bottom", 78, 24);
+
+    // .quiz__container
+    &__container {
+    }
+
+    // .quiz__content
+    &__content {
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: 1fr minmax(rem(320), rem(1060));
+            @include adaptiveValue("gap", 56, 30);
+        }
+    }
+
+    // .quiz__side
+    &__side {
+        padding: rem(125) rem(46) rem(114) rem(59);
+        background-color: #f2f2f2;
+
+        ._windows-quiz & {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        @media (max-width: $tablet) {
+            margin-bottom: rem(30);
+            padding: rem(30);
+        }
+    }
+
+    // .quiz__inner
+    &__inner {
+        max-width: rem(1060);
+    }
+
+    // .quiz__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: rem(20);
+
+        padding-bottom: rem(42);
+        border-bottom: 1px solid $mainColor;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: rem(30);
+        }
+    }
+
+    // .quiz__slider
+    &__slider {
+    }
+
+    // .quiz__slide
+    &__slide {
+        padding-top: rem(42);
+        max-width: rem(1060);
+        position: relative;
+
+        opacity: 0 !important;
+        z-index: -10;
+
+        &.swiper-slide-active {
+            opacity: 1 !important;
+            z-index: 1;
+        }
+    }
+}
+
+.side-quiz {
+    // .side-quiz__addtitle
+    &__addtitle {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 13);
+        text-transform: uppercase;
+    }
+
+    // .side-quiz__addsubtitle
+    &__addsubtitle {
+        @include adaptiveValue("margin-bottom", 55, 24);
+        @include adaptiveValue("font-size", 19, 10);
+        font-weight: 300;
+    }
+
+    // .side-quiz__subwrapper
+    &__subwrapper {
+        padding: rem(20);
+        background-color: #f2f2f2;
+
+        @media (min-width: $tablet) {
+            padding: rem(84) rem(60);
+        }
+    }
+
+    // .side-quiz__title
+    &__title {
+        margin-bottom: rem(52);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 25, 15, 1);
+
+        @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .side-quiz__gifts
+    &__gifts {
+        margin-bottom: rem(24);
+        @include adaptiveValue("padding-bottom", 60, 30, 1600, 991, 1);
+        border-bottom: 1px solid $blue;
+
+        @media (max-width: $mobile) {
+            font-size: rem(14);
+        }
+
+        ._windows-quiz & {
+            border: 0;
+
+            @media (max-width: $mobile) {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    // .side-quiz__detail
+    &__detail {
+        font-size: rem(20);
+        @include adaptiveValue("font-size", 20, 13);
+        color: $blue;
+        text-align: center;
+
+        @media (min-width: $tablet) {
+            margin-bottom: rem(78);
+        }
+    }
+
+    // .side-quiz__nav
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: rem(20);
+        margin-bottom: rem(12);
+
+        @media (max-width: $tablet) {
+            margin-top: rem(40);
+        }
+
+        .prev {
+            flex: 0 0 rem(48);
+            height: rem(48);
+
+            border: 1px solid $blue;
+            border-radius: 50%;
+
+            path {
+                fill: $blue;
+            }
+
+            @media (max-width: $mobile) {
+                flex: 0 0 rem(34);
+                height: rem(34);
+            }
+        }
+
+        .next {
+            justify-content: center;
+            width: rem(250);
+            transition: opacity 0.2s ease-in-out;
+
+            &.swiper-button-disabled {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+    }
+
+    // .side-quiz__next
+    &__next {
+    }
+
+    // .side-quiz__mark
+    &__mark {
+        font-weight: 300;
+        @include adaptiveValue("font-size", 15, 8);
+        text-align: center;
+    }
+}
+
+.gifts-quiz-side {
+    // .gifts-quiz-side__item
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+
+        &:not(:last-child) {
+            margin-bottom: rem(52);
+            @include adaptiveValue("margin-bottom", 52, 15, 1600, 991, 1);
+        }
+    }
+}
+
+.item-gifts-side {
+    // .item-gifts-side__icon
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 rem(48);
+        height: rem(48);
+        background-color: #fff;
+        border-radius: 50%;
+    }
+}
+
+.header-quiz {
+    // .header-quiz__left
+    &__left {
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    // .header-quiz__title
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 16, 1920, 320, 1);
+        max-width: rem(450);
+        text-transform: uppercase;
+
+        ._windows-quiz & {
+            max-width: rem(430);
+            font-weight: 500;
+            @include adaptiveValue("font-size", 25, 11);
+            color: $blue;
+            text-transform: none;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: rem(9);
+        }
+    }
+
+    // .header-quiz__subtitle
+    &__subtitle {
+        @media (max-width: $mobile) {
+            font-size: rem(10);
+        }
+    }
+
+    // .header-quiz__pagination
+    &__pagination {
+        display: flex;
+        gap: rem(32);
+
+        .swiper-pagination-bullet {
+            display: block;
+            flex: 0 0 rem(16);
+            width: rem(16);
+            height: rem(16);
+            background-color: #d9d9d9;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.2s ease-in-out;
+
+            @media (max-width: $mobile) {
+                flex: 0 0 rem(12);
+                width: rem(12);
+                height: rem(12);
+            }
+
+            &-active {
+                background-color: $red;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: rem(48);
+                    height: rem(48);
+                    border: 1px solid $blue;
+                    border-radius: 50%;
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    @media (max-width: $mobile) {
+                        width: rem(36);
+                        height: rem(36);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide-quiz {
+    // .slide-quiz_1
+    &_1 {
+        .options {
+            display: flex;
+            flex-direction: row;
+            gap: rem(30);
+            overflow-x: auto;
+            padding-bottom: rem(30);
+
+            @media (min-width: $mobileSmall) {
+                @include gridCards(fit, rem(200), 1fr, 30px);
+                padding-bottom: 0;
+            }
+
+            @media (min-width: $mobile) {
+                @include gridCards(fit, rem(220), 1fr, 30px);
+            }
+
+            @media (min-width: $tablet) {
+                @include gridCards(fit, rem(250), 1fr, 30px);
+            }
+
+            // .options__item
+            &__item {
+                flex: 0 0 rem(149);
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                display: flex;
+                flex-direction: column;
+
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    /* bottom: rem(40); */
+                    z-index: 2;
+                    background-color: #fff;
+
+                    @media (max-width: $mobileSmall) {
+                        bottom: rem(15);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    top: auto;
+                    right: rem(16);
+                    bottom: rem(16);
+                    left: auto;
+                    z-index: 3;
+
+                    @media (max-width: $mobileSmall) {
+                        right: rem(8);
+                        bottom: rem(23);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+
+            // .options__image
+            &__image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    // .slide-quiz_2
+    &_2 {
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(62);
+            max-width: rem(670);
+            margin: 0 auto;
+
+            @media (max-width: $mobile) {
+                padding: 0 rem(20);
+                gap: rem(17);
+            }
+
+            // .options__item
+            &__item {
+                background-color: #f2f2f2;
+
+                &:last-child {
+                    grid-area: 2 / 1 / 2 / 3;
+                }
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                width: 100%;
+                text-align: center;
+                height: rem(88);
+                justify-content: center;
+
+                @media (max-width: $mobile) {
+                    height: rem(33);
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: rem(-24);
+                    transform: translate(0px, -50%);
+                    background-color: #fff;
+
+                    @media (max-width: $mobile) {
+                        left: rem(-12);
+                    }
+                }
+
+                &::after {
+                    top: rem(36);
+                    left: rem(-8);
+
+                    @media (max-width: $mobile) {
+                        top: rem(12);
+                        left: rem(-4);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+        }
+    }
+
+    // .slide-quiz_3
+    &_3 {
+        .options {
+            max-width: rem(699);
+            margin: 0 auto;
+            padding-bottom: rem(30);
+
+            display: flex;
+            flex-direction: row;
+            gap: rem(30);
+            overflow-x: auto;
+
+            @media (min-width: $mobileSmall) {
+                @include gridCards(fit, rem(200), 1fr, 30px);
+                padding-bottom: 0;
+            }
+
+            @media (min-width: $mobile) {
+                @include gridCards(fit, rem(220), 1fr, 30px);
+            }
+
+            @media (min-width: $tablet) {
+                @include gridCards(fit, rem(250), 1fr, 30px);
+            }
+
+            // .options__item
+            &__item {
+                flex: 0 0 rem(149);
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                display: flex;
+                flex-direction: column;
+
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    /* bottom: rem(40); */
+                    z-index: 2;
+                    background-color: #fff;
+
+                    @media (max-width: $mobileSmall) {
+                        bottom: rem(15);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    top: auto;
+                    right: rem(16);
+                    bottom: rem(16);
+                    left: auto;
+                    z-index: 3;
+
+                    @media (max-width: $mobileSmall) {
+                        right: rem(8);
+                        bottom: rem(23);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+
+            // .options__image
+            &__image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    // .slide-quiz_4
+    &_4 {
+        .options {
+            @include gridCards(fit, rem(36), 1fr, rem(26));
+
+            @media (min-width: $mobile) {
+                @include gridCards(fit, rem(94), 1fr, rem(94));
+            }
+
+            // .options__item
+            &__item {
+                width: rem(41);
+                max-width: rem(41);
+
+                @media (min-width: $mobile) {
+                    width: rem(94);
+                    max-width: rem(94);
+                }
+            }
+
+            // .options__input
+            &__input {
+                &:checked + .options__label:before {
+                    transform: scale(1);
+                }
+            }
+
+            // .options__label
+            &__label {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+
+                ._current-color {
+                    display: block;
+                    width: rem(34);
+                    height: rem(34);
+                    border-radius: 50%;
+                    border: 1px solid;
+
+                    @media (min-width: $mobile) {
+                        width: rem(93);
+                        height: rem(93);
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    top: rem(23);
+                    left: rem(23);
+                    transform: scale(0);
+
+                    @media (max-width: $mobile) {
+                        top: rem(5);
+                        left: rem(9);
+                    }
+                }
+
+                &::after {
+                    top: rem(39);
+                    left: rem(39);
+
+                    @media (max-width: $mobile) {
+                        top: rem(13);
+                        left: rem(17);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+                white-space: nowrap;
+
+                @media (max-width: $mobile) {
+                    font-size: rem(8);
+                }
+            }
+        }
+    }
+
+    // .slide-quiz_5
+    &_5 {
+        .options {
+            display: grid;
+            gap: rem(20);
+            max-width: rem(670);
+            margin: 0 auto;
+            padding: 0 rem(20);
+
+            @media (min-width: $mobile) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: rem(62);
+            }
+
+            // .options__item
+            &__item {
+                background-color: #f2f2f2;
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                width: 100%;
+                text-align: center;
+                height: rem(88);
+                justify-content: center;
+
+                @media (max-width: $mobile) {
+                    height: rem(33);
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: rem(-24);
+                    transform: translate(0px, -50%);
+                    background-color: #fff;
+
+                    @media (max-width: $mobile) {
+                        left: rem(-12);
+                    }
+                }
+
+                &::after {
+                    top: rem(36);
+                    left: rem(-8);
+
+                    @media (max-width: $mobile) {
+                        top: rem(12);
+                        left: rem(-4);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+        }
+    }
+
+    // .slide-quiz_6
+    &_6 {
+        .options {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: rem(62);
+            max-width: rem(670);
+            margin: 0 auto rem(42);
+
+            @media (max-width: $mobile) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: rem(20);
+                padding: 0 rem(20);
+            }
+
+            // .options__item
+            &__item {
+                flex: 0 0 rem(304);
+                background-color: #f2f2f2;
+
+                &:last-child {
+                    grid-area: 2 / 1 / 2 / 3;
+                }
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                width: 100%;
+                text-align: center;
+                height: rem(88);
+                justify-content: center;
+
+                @media (max-width: $mobile) {
+                    height: rem(33);
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: rem(-24);
+                    transform: translate(0px, -50%);
+                    background-color: #fff;
+
+                    @media (max-width: $mobile) {
+                        left: rem(-12);
+                    }
+                }
+
+                &::after {
+                    top: rem(36);
+                    left: rem(-8);
+
+                    @media (max-width: $mobile) {
+                        top: rem(12);
+                        left: rem(-4);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+        }
+
+        .input,
+        .button {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: rem(33);
+
+            @media (min-width: $mobile) {
+                width: rem(325);
+                height: rem(51);
+            }
+        }
+
+        .input {
+            margin-bottom: rem(25);
+        }
+    }
+
+    // .slide-quiz_7
+    &_7 {
+        .options {
+            @include gridCards(fit, rem(250), 1fr, rem(40));
+            @include adaptiveValue("gap", 40, 10);
+            padding: 0 rem(50);
+
+            // .options__item
+            &__item {
+                background-color: #f2f2f2;
+            }
+
+            // .options__input
+            &__input {
+            }
+
+            // .options__label
+            &__label {
+                width: 100%;
+                text-align: center;
+                height: rem(33);
+                justify-content: center;
+
+                @media (min-width: $mobile) {
+                    height: rem(88);
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: rem(-12);
+                    transform: translate(0px, -50%);
+                    background-color: #fff;
+                }
+
+                &::after {
+                    top: rem(36);
+                    left: rem(-8);
+
+                    @media (max-width: $mobile) {
+                        top: rem(12);
+                        left: rem(-4);
+                    }
+                }
+            }
+
+            // .options__text
+            &__text {
+            }
+        }
+    }
+
+    // .slide-quiz__title
+    &__title {
+        max-width: rem(426);
+        margin: 0 auto rem(70);
+        font-weight: 500;
+        font-size: rem(25);
+        @include adaptiveValue("font-size", 25, 10, 767, 320, 1);
+        color: $blue;
+        text-align: center;
+
+        @media (max-width: $mobile) {
+            margin-bottom: rem(15);
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+}
+
+// Спойлер
+.spollers__item {
+	font-size: rem(20);
+	border-bottom: 1px solid rgba($mainColor, 0.3);
+}
+
+// Заголовок спойлера
+.spollers__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: rem(30);
+	width: 100%;
+	cursor: pointer;
+	text-align: left;
+	position: relative;
+	padding: rem(14) 0;
+
+	font-weight: 500;
+	@include adaptiveValue("font-size", 18, 12);
+
+	transition: color .2s ease;
+
+	&._spoller-active {
+		color: $blue;
+	}
+
+	&_icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(-90deg);
+		width: rem(25);
+		flex: 0 0 rem(25);
+		height: rem(25);
+		border: 1px solid $mainColor;
+		border-radius: 50%;
+
+		transition: transform .2s ease-in-out;
+
+		._spoller-active & {
+			border-color: $blue;
+			transform: rotate(90deg);
+
+			path {
+				fill: $blue;
+			}
+		}
+
+		._spoller-init & {
+			cursor: pointer;
+		}
+
+		@media (min-width:$mobile) {
+			width: rem(33);
+			flex: 0 0 rem(33);
+			height: rem(33);
+		}
+	}
+}
+
+// Контент спойлера
+.spollers__body {
+	padding-bottom: rem(27);
+	@include adaptiveValue("font-size", 16, 10);
+}

@@ -1,0 +1,25 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(250);
+	padding: rem(18) rem(29);
+	background-color: $red;
+	color: #fff;
+	@include adaptiveValue("font-size", 15, 9, 767, 320, 1);
+
+	@media (max-width:$mobile) {
+		padding: rem(10) rem(29);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+}

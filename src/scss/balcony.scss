@@ -1,0 +1,126 @@
+.balcony {
+    // .balcony__volume
+    &__volume {
+        position: relative;
+        @include adaptiveValue("margin-bottom", 75, 22);
+    }
+}
+
+//========================================================================================================================================================
+
+.volume-balcony {
+    // .volume-balcony__image
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 35%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: em(1365)) {
+            display: none;
+        }
+    }
+
+    // .volume-balcony__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: rem(1220);
+        padding: 0 rem(15);
+
+        @media (min-width: em(1366)) {
+            align-items: flex-end;
+        }
+    }
+
+    // .volume-balcony__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 46, 21);
+        max-width: rem(788);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 13);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    // .volume-balcony__text
+    &__text {
+        @include adaptiveValue("margin-bottom", 47, 21);
+        max-width: rem(788);
+        @include adaptiveValue("font-size", 19, 10);
+        text-align: center;
+    }
+
+    // .volume-balcony__form
+    &__form {
+        display: flex;
+        justify-content: center;
+        padding: rem(40) rem(24);
+        width: 100%;
+        background: #f2f2f2;
+
+        @media (min-width: em(1366)) {
+            justify-content: flex-end;
+        }
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(15);
+        max-width: rem(730);
+
+        @media (min-width: $tablet) {
+            gap: rem(30);
+        }
+
+        @media (min-width: $pc) {
+            gap: rem(30) rem(80);
+        }
+
+        // .form__label
+        &__label {
+            display: flex;
+            flex-direction: column;
+
+            & > span {
+                @include adaptiveValue("font-size", 15, 8);
+            }
+        }
+
+        // .form__button
+        &__button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: 2 / 1 / 2 / 3;
+
+            .button {
+                margin-bottom: rem(5);
+            }
+
+            p {
+                max-width: rem(331);
+                @include adaptiveValue("font-size", 11, 8);
+                text-align: center;
+            }
+        }
+
+        .input {
+            margin-top: auto;
+
+            @media (max-width: $mobile) {
+                padding: rem(10) rem(8);
+                height: rem(34);
+                @include adaptiveValue("font-size", 19, 10);
+            }
+        }
+    }
+}

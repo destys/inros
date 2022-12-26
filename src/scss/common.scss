@@ -1,0 +1,24 @@
+// Заголовки, общие БЄМ блоки и проче...
+*,
+html * {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+    background-color: rgba($mainColor, 0.2);
+    border-radius: 5px;
+    border: 0;
+}

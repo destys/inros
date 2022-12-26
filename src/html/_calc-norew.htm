@@ -1,0 +1,255 @@
+<div class="calc" id="calc">
+    <div class="calc__container">
+        <div class="wrapper">
+            <div class="title">
+                <h3>Калькулятор остекления балконов и лоджий</h3>
+            </div>
+            <div class="calc-box">
+                <div class="calc-column calc-column-arrea">
+                    <div class="calc-form">
+                        <div class="calc-field proportions">
+                            <div class="calc-field-title">
+                                <p><span>Шаг 1.</span> Укажите полные размеры<font color="red"><b> балкона</b></font>
+                                </p>
+                            </div>
+                            <div class="calc-field-list">
+                                <div class="calc-field-item">
+                                    <p>Длина, <font color="red"><b>см</b></font>
+                                    </p>
+                                    <input type="number" value="100" max="1200" name="#" id="calc_width_input">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Глубина, <font color="red"><b>см</b></b> </font>
+                                    </p>
+                                    <input type="number" value="30" max="300" name="#" id="calc_depth_input">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Высота, <font color="red"><b>см </b></font>
+                                    </p>
+                                    <input type="number" value="210" max="360" name="#" id="calc_depth_height">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-field type-window">
+                            <div class="calc-field-title">
+                                <p><span>Шаг 2.</span> Выберите тип остекления</p>
+                            </div>
+                            <div class="calc-radio">
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type_wind" id="type_wind_heat" checked>
+                                        <span class="type-window__text">
+                                            Теплое (ПВХ)
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type_wind" id="type_wind_cold">
+                                        <span class="type-window__text">
+                                            Холодное (Алюминий)
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type_wind" id="type_wind_panaram">
+                                        <span class="type-window__text">
+                                            Панорамное (ПВХ)
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-field">
+                            <div class="calc-field-title">
+                                <p><span>Шаг 3.</span> Выберите тип балкона</p>
+                            </div>
+                            <div class="calc-radio">
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type1">
+                                        <span>
+                                            <img src="@img/calc/window1.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type2">
+                                        <span>
+                                            <img src="@img/calc/window2.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type3">
+                                        <span>
+                                            <img src="@img/calc/window3.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type4">
+                                        <span>
+                                            <img src="@img/calc/window4.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type5">
+                                        <span>
+                                            <img src="@img/calc/window5.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type6">
+                                        <span>
+                                            <img src="@img/calc/window6.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type7">
+                                        <span>
+                                            <img src="@img/calc/window7.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="calc-radio-item">
+                                    <label>
+                                        <input type="radio" name="type" class="windows_vars" id="type8">
+                                        <span>
+                                            <img src="@img/calc/window8.png" alt="img">
+                                        </span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-field calc-field-more">
+                            <div class="calc-field-title">
+                                <p><span>Шаг 4.</span> Дополнительные работы</p>
+                            </div>
+                            <div class="calc-field-list">
+                                <div class="calc-field-item">
+                                    <p>Утепление</p>
+                                    <input type="checkbox" class="add_works_vars" id="work_utepl">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Электрика</p>
+                                    <input type="checkbox" class="add_works_vars" id="work_electr">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Встроенная мебель</p>
+                                    <input type="checkbox" class="add_works_vars" id="work_mebel">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Внутренняя отделка</p>
+                                    <input type="checkbox" class="add_works_vars" id="work_otdelka">
+                                </div>
+                                <div class="calc-field-item">
+                                    <p>Тёплый пол</p>
+                                    <input type="checkbox" class="add_works_vars" id="work_floor">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-discount">
+                        <div class="calc-discount-title">Расчёт с учётом скидки 60 %</div>
+                        <div class="calc-discount-text">
+                            <p>Хотите зафиксировать персональную <span>скидку на 30 дней?</span></p>
+                        </div>
+                        <div class="calc-discount-sum">Сумма от <span id="calc_price">0</span>р</div>
+                        <div class="calc-discount-field">
+                            <div role="form" class="wpcf7" id="wpcf7-f150-o8" lang="ru-RU" dir="ltr">
+                                <div class="screen-reader-response">
+                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                    <ul></ul>
+                                </div>
+                                <form action="index.html#wpcf7-f150-o8" method="post" class="wpcf7-form init"
+                                    novalidate="novalidate" data-status="init">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="150" />
+                                        <input type="hidden" name="_wpcf7_version" value="5.4" />
+                                        <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f150-o8" />
+                                        <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                    </div>
+                                    <p><span class="wpcf7-form-control-wrap text-749"><input type="text" name="text-749"
+                                                value="" size="40" class="wpcf7-form-control wpcf7-text"
+                                                id="calc_price_form" aria-invalid="false" /></span></p>
+                                    <div class="discount-field-tel">
+                                        <span class="wpcf7-form-control-wrap tel-811"><input type="tel" name="tel-811"
+                                                value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-tel"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Ваш телефон" /></span>
+                                    </div>
+                                    <div class="discount-field-btn btn btn-red">
+                                        <input type="submit" value="Получить смс"
+                                            class="wpcf7-form-control wpcf7-submit" />
+                                        </p>
+                                    </div>
+                                    <p><span class="wpcf7-form-control-wrap invert-agree"><span
+                                                class="wpcf7-form-control wpcf7-acceptance invert"><span
+                                                    class="wpcf7-list-item"><input type="checkbox" name="invert-agree"
+                                                        value="1" aria-invalid="false"
+                                                        class="invert-agree" /></span></span></span></p>
+                                    <input type='hidden' class='wpcf7-pum'
+                                        value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-column calc-column-range">
+                    <div class="range">
+                        <div class="range-width range-track">
+                            <div class="range-width-box">
+                                <label for="amount-width">Длина:</label>
+                                <input type="text" id="amount-width" readonly>
+                            </div>
+                            <div id="slider-width"></div>
+                        </div>
+                        <div class="window">
+                            <img src="@img/calc/Osteklenie.png" alt="Калькулятор остекления балконов">
+                        </div>
+                        <div class="range-depth range-track">
+                            <div class="range-depth-box">
+                                <label for="amount-depth">Глубина:</label>
+                                <input type="text" id="amount-depth" readonly>
+                            </div>
+                            <div id="slider-depth"></div>
+                        </div>
+                        <div class="range-height range-track">
+                            <div class="range-height-box">
+                                <label for="amount-height">Высота:</label>
+                                <input type="text" id="amount-height" readonly>
+                            </div>
+                            <div id="slider-height"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
