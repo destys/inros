@@ -42,7 +42,7 @@
         content: none;
     }
 
-    &::after {
+    &__after {
         content: "";
         position: absolute;
         left: rem(666);
@@ -67,17 +67,19 @@
             top: rem(120);
         }
 
-        ._doors & {
+        ._noafter & {
+            content: none;
+        }
+
+        /* ._doors & {
             background: url("@img/doors.png") 0 0 no-repeat;
             background-size: contain !important;
             bottom: rem(-40);
             left: rem(898);
-        }
+        } */
     }
 
-    &._noafter::after {
-        content: none;
-    }
+    
 
     // .intro__container
     &__container {
