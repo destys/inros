@@ -31,7 +31,7 @@
 		"gulp-if": "latest",
 		"gulp-imagemin": "latest",
 		"gulp-newer": "latest",
-		"gulp-notify": "latest",
+		"gulp-notify": "^4.0.0",
 		"gulp-plumber": "latest",
 		"gulp-prettier": "latest",
 		"gulp-rename": "latest",

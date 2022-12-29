@@ -47,3 +47,17 @@ document.addEventListener( 'wpcf7submit', function( event ) {
         document.documentElement.classList.remove('lock');
     }
 }, false );
+
+//========================================================================================================================================================
+
+// Menu
+
+const menuItemsWithSub =document.querySelectorAll('.menu-item-has-children');
+
+if (menuItemsWithSub.length) {
+    menuItemsWithSub.forEach(el => {
+        el.addEventListener('click', ()=> {
+            el.classList.toggle('_show');
+        })
+    })
+}
