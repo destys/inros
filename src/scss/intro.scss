@@ -54,17 +54,7 @@
         height: rem(641);
 
         @media (max-width: em(1365)) {
-            content: none;
-        }
-
-        @media (max-width: $mobileSmall) {
-            content: "";
-            width: rem(158);
-            height: rem(158);
-            background-size: contain;
-            @include adaptiveValue("left", 310, 180, 479, 320, 1);
-            bottom: auto;
-            top: rem(120);
+            display: none;
         }
 
         ._noafter & {

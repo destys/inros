@@ -25,20 +25,6 @@ if (aboutTabs.length && aboutTabsImage.length) {
 
 //========================================================================================================================================================
 
-// Закрытие бургер меню
-
-const burger = document.querySelector('.burger');
-
-if (burger) {
-    burger.addEventListener("click", function (e) {
-        if (!e.target.classList.contains('burger__wrapper')) {
-            menuClose();
-        }
-    });
-}
-
-//========================================================================================================================================================
-
 // CF7
 
 document.addEventListener( 'wpcf7submit', function( event ) {

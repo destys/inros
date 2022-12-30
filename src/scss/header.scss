@@ -35,6 +35,10 @@
 			justify-content: flex-start;
 			margin-bottom: rem(20);
 		}
+
+		@media (max-width: em(768)) {
+			display: none;
+		}
 	}
 }
 
@@ -52,6 +56,9 @@
 
 	// .top-header__menu
 	&__menu {
+		@media (max-width: em(991)) {
+			display: none;
+		}
 	}
 
 	// .top-header__contacts
@@ -102,7 +109,7 @@
 				opacity: 0;
 				transform: translateY(-100%);
 				z-index: -1;
-				transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+				transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 			}
 
 			&._show {
@@ -315,13 +322,99 @@
 	&__wrapper {
 		transform: translate(-100%, 0px);
 		transition: transform 0.2s ease-in-out;
-		padding: rem(20) rem(20) rem(40);
 		background-color: #fff;
-		width: rem(375);
+		width: 100%;
+		max-width: rem(375);
 		height: 100%;
+		overflow-y: auto;
 
 		.menu-open & {
 			transform: translate(0px, 0px);
+		}
+	}
+
+	&__header {
+		padding: rem(20) rem(20) 0;
+		margin-bottom: rem(30);
+		gap: rem(10);
+		.top-header__logo {
+			flex: 0 0 rem(51);
+			width: rem(51);
+			height: rem(26);
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.icon-menu {
+			margin-left: 0;
+			flex: 0 0 rem(20);
+			height: rem(20);
+		}
+
+		.contacts-top-header__social:first-child {
+			margin-left: auto !important;
+		}
+
+		.contacts-top-header__phone {
+			font-size: rem(11);
+			flex: 0 0 100% !important;
+		}
+
+		.contacts-top-header__call {
+			flex-wrap: wrap !important;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.menu-tabs {
+
+	// .menu-tabs__navigation
+	&__navigation {
+		display: flex;
+	}
+	// .menu-tabs__title
+	&__title {
+		height: rem(36);
+		flex: 0 0 50%;
+		font-size: rem(12);
+
+		transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+		&._tab-active {
+			background-color: $blue;
+			color: #fff;
+		}
+	}
+	// .menu-tabs__content
+	&__content {
+		padding: rem(20) rem(20) rem(40);
+		height: 100%;
+	}
+	// .menu-tabs__body
+	&__body {
+
+		.menu {
+			// .menu__body
+			&__body {
+				&:last-child{
+					margin-top: rem(50);
+				}
+			}
+			// .menu__list
+			&__list {
+			}
+			// .menu__item
+			&__item {
+			}
+			// .menu__link
+			&__link {
+				font-size: rem(13);
+			}
 		}
 	}
 }
