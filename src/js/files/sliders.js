@@ -396,6 +396,32 @@ function initSliders() {
 			},
 		});
 	}
+	if (document.querySelector('.case__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.case__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.case__nav .prev',
+				nextEl: '.case__nav .next',
+			},
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
