@@ -1,0 +1,57 @@
+.text {
+    @include adaptiveValue("margin-bottom", 80, 30);
+    // .text__container
+    &__container {
+    }
+    // .text__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 32, 12);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 15);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    // .text__content
+    &__content {
+        h3 {
+            font-weight: 700;
+            @include adaptiveValue("font-size", 21, 11);
+            text-align: center;
+            text-transform: uppercase;
+            
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+        }
+
+        ul {
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+
+            li {
+                list-style: inside;
+
+                &::marker {
+                    color: $blue;
+                }
+            }
+        }
+
+        ol {
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+
+            li {
+                list-style: decimal inside;
+            }
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(16);
+            }
+        }
+    }
+}

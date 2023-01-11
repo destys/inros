@@ -47,3 +47,17 @@ if (menuItemsWithSub.length) {
         })
     })
 }
+
+//========================================================================================================================================================
+
+const partItems =document.querySelectorAll('.item-parts');
+const partDots =document.querySelectorAll('.parts__dots ._dot');
+
+if (partItems.length) {
+    partItems.forEach((el, i) => {
+        el.addEventListener('mouseover', ()=> {
+            partDots.forEach(el => el.classList.remove('_current'));
+            partDots[i].classList.add('_current')
+        });
+    })
+}
