@@ -465,11 +465,37 @@
 //========================================================================================================================================================
 
 .windows-credit {
+    &__msg {
+        position: relative;
+        padding-top: rem(15);
+        @include adaptiveValue("padding-bottom", 45, 25);
+        max-width: rem(1780);
+
+        @media (min-width: em(1120)) {
+            &::before {
+                content: "";
+                padding: rem(33) 0 rem(40);
+                width: 85%;
+                height: 100%;
+                background-color: #f8f8f8;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @media (min-width: $tablet) {
+                    width: 52%;
+                    padding: rem(33) 0 rem(40);
+                }
+            }
+        }
+    }
     // .windows-credit__container
     &__container {
         display: flex;
         align-items: center;
         @include adaptiveValue("gap", 50, 10);
+        position: relative;
 
         @media (max-width: $tablet) {
             flex-wrap: wrap;
@@ -484,7 +510,6 @@
 
     // .windows-credit__title
     &__title {
-        @include adaptiveValue("margin-bottom", 45, 25);
         margin-left: auto;
         max-width: rem(540);
         font-weight: 700;

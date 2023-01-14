@@ -37,7 +37,7 @@ function initSliders() {
 		new Swiper('.intro__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -51,14 +51,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+			
 			// Эффекты
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
-				delay: 3000,
+				delay: 4000,
 				disableOnInteraction: false,
 			},
-			*/
+			
 
 			// Пагинация
 			/*
@@ -240,7 +240,7 @@ function initSliders() {
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3,
+			slidesPerView: 1,
 			spaceBetween: 30,
 			autoHeight: true,
 			speed: 800,
@@ -401,17 +401,17 @@ function initSliders() {
 		new Swiper('.case__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
-			autoHeight: true,
+			autoHeight: false,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -419,6 +419,11 @@ function initSliders() {
 			navigation: {
 				prevEl: '.case__nav .prev',
 				nextEl: '.case__nav .next',
+			},
+
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
 			},
 		});
 	}

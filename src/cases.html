@@ -8,7 +8,74 @@
     <div class="wrapper">
         @@include('html/_header.htm',{})
         <main class="page">
+            <section class="present">
+                <div class="present__image">
+                    <img src="@img/balcony/volume.jpg" alt="">
+                </div>
+                <div class="present__content">
+                    <h2 class="present__title">Сушилка или электрика в подарок </h2>
+                    <div class="present__subtitle">Акция суммируется с другими</div>
+                    <div class="present__text">Описание: при остеклении балкона и заказе полной внутренней отделки
+                        балкона или лоджии с утеплением, в подарок получаете потолочную сушилку для белья или работы по
+                        электрике</div>
+                    <button type="button" class="present__button button" data-popup="#callback">Воспользоваться
+                        акцией</button>
+                    <div class="present__line"></div>
+                    <div class="present__credit credit-present">
+                        <div class="credit-present__title">Проверьте одобрение рассрочки онлайн</div>
+                        <div class="credit-present__list">
+                            <div class="credit-present__item">
+                                <div class="credit-present__num">87,4%</div>
+                                <div class="credit-present__text">одобрения</div>
+                            </div>
+                            <div class="credit-present__item">
+                                <div class="credit-present__num"><span>До</span> 36</div>
+                                <div class="credit-present__text">месяцев</div>
+                            </div>
+                            <div class="credit-present__item">
+                                <div class="credit-present__num"><span>под</span> 0%</div>
+                                <div class="credit-present__text">без переплаты</div>
+                            </div>
+                            <button type="button" class="credit-present__button button"
+                                data-popup="#callback">Рассчитать онлайн</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="cases-page">
+                <div class="windows-credit__msg">
+                    <h2 class="windows-credit__title">за 13 лет мы установили
+                        более 10 000 пластиковых окон пвх</h2>
+                </div>
+                <div class="cases-credit _ten">
+                    <div class="cases-credit__wrapper">
+                        <div class="cases-credit__container">
+                            <div class="cases-credit__percent">10%</div>
+                            <div class="cases-credit__center center-cases-credit">
+                                <div class="center-cases-credit__title">
+                                    окна сейчас<br />
+                                    -деньги потом!</div>
+                                <div class="center-cases-credit__subtitle">первый взнос всего 10%</div>
+                                <button type="submit" class="button">Узнать подробности</button>
+                            </div>
+                            <div class="windows-credit__adv adv-windows-credit">
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">48</div>
+                                    <div class="adv-windows-credit__text">человек стали нашими клиентами в сентябре
+                                    </div>
+                                </div>
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">1 370</div>
+                                    <div class="adv-windows-credit__text">клиентов за 13 лет работы</div>
+                                </div>
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">90%</div>
+                                    <div class="adv-windows-credit__text">клиентов готовы нас рекомендовать</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="cases-page__container">
                     <div class="cases-page__wrapper">
                         <div class="cases-page__title title-cases">
@@ -118,27 +185,60 @@
                         </div>
                     </div>
                 </div>
-                <div class="windows-credit">
-                    <div class="windows-credit__wrapper">
-                        <div class="windows-credit__container">
-                            <div class="windows-credit__percent">35%</div>
-                            <div class="windows-credit__center center-windows-credit">
-                                <div class="center-windows-credit__title">получите скидку
+                <div class="cases-credit">
+                    <div class="cases-credit__wrapper">
+                        <div class="cases-credit__container">
+                            <div class="cases-credit__percent">35%</div>
+                            <div class="cases-credit__center center-cases-credit">
+                                <div class="center-cases-credit__title">получите скидку
                                     35% на окна из пвх</div>
-                                <div class="center-windows-credit__subtitle">оформите заявку на нашем сайте</div>
+                                <div class="center-cases-credit__subtitle">оформите заявку на нашем сайте</div>
                             </div>
-                            <form class="windows-credit__form form-windows-credit form">
-                                <div class="form-windows-credit__row">
-                                    <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-                                        placeholder="Имя" class="input">
-                                    <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-                                        placeholder="Телефон" class="input">
+                            <form class="cases-credit__form form-cases-credit form">
+                                <div class="form-cases-credit__row">
+                                    <label class="form-cases-credit__label">
+                                        <span>Как Вас представить?</span>
+                                        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                            placeholder="Имя" class="input">
+                                    </label>
+                                    <label class="form-cases-credit__label">
+                                        <span>Ваш телефон</span>
+                                        <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
+                                            placeholder="Телефон" class="input">
+                                    </label>
                                     <button type="submit" class="button _fw">Заказать замер</button>
                                 </div>
-                                <div class="form-windows-credit__policy">Нажав кнопку “Заказать замер” вы даете согласие
+                                <div class="form-cases-credit__policy">Нажав кнопку “Заказать замер” вы даете согласие
                                     на
                                     обработку Ваших персональных данных</div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases-credit _ten">
+                    <div class="cases-credit__wrapper">
+                        <div class="cases-credit__container">
+                            <div class="cases-credit__percent">10%</div>
+                            <div class="cases-credit__center center-cases-credit">
+                                <div class="center-cases-credit__title">получите скидку
+                                    35% на окна из пвх</div>
+                                <div class="center-cases-credit__subtitle">оформите заявку на нашем сайте</div>
+                            </div>
+                            <div class="windows-credit__adv adv-windows-credit">
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">48</div>
+                                    <div class="adv-windows-credit__text">человек стали нашими клиентами в сентябре
+                                    </div>
+                                </div>
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">1 370</div>
+                                    <div class="adv-windows-credit__text">клиентов за 13 лет работы</div>
+                                </div>
+                                <div class="adv-windows-credit__item">
+                                    <div class="adv-windows-credit__num">90%</div>
+                                    <div class="adv-windows-credit__text">клиентов готовы нас рекомендовать</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

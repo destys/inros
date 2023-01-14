@@ -104,12 +104,14 @@
 				background-color: #fff;
 				min-height: rem(48);
 
-				font-size: rem(13);
-
 				opacity: 0;
 				transform: translateY(-100%);
 				z-index: -1;
 				transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+				.menu__link {
+					font-size: rem(13);
+				}
 			}
 
 			&._show {

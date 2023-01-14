@@ -21,7 +21,9 @@
     }
     // .case__slide
     &__slide {
-        img {
+        max-height: rem(670);
+
+        * {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -166,11 +168,11 @@
     }
     // .tabs-case__title
     &__title {
-        @include adaptiveValue("padding", 17, 6);
         @include adaptiveValue("font-size", 15, 10);
         opacity: 0.5;
         border: 1px solid transparent;
         border-radius: 51px;
+        padding: rem(15) rem(75);
 
         transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
         white-space: nowrap;
@@ -179,6 +181,10 @@
             color: $red;
             border-color: $red;
             opacity: 1;
+        }
+
+        @media (max-width:$mobile){
+             padding: rem(15) rem(35); 
         }
     }
     // .tabs-case__content

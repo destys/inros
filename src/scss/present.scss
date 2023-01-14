@@ -1,0 +1,109 @@
+.present {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 135, 10);
+    max-width: rem(1785);
+
+    @media (max-width:$tablet){
+        padding: 0 rem(15);
+    }
+    // .present__image
+    &__image {
+        flex: 0 0 40%;
+
+        @media (max-width:$tablet){
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    // .present__content
+    &__content {
+        flex: 1 1 auto;
+        padding: rem(30) 0;
+        max-width: rem(1080);
+    }
+    // .present__title
+    &__title {
+        margin-bottom: rem(11);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 15);
+        text-transform: uppercase;
+    }
+    // .present__subtitle
+    &__subtitle {
+        @include adaptiveValue("margin-bottom", 59, 20);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 22, 11);
+        color: $blue;
+    }
+    // .present__text
+    &__text {
+        @include adaptiveValue("margin-bottom", 52, 25);
+        max-width: rem(516);
+        @include adaptiveValue("font-size", 16, 10);
+    }
+    // .present__button
+    &__button {
+        margin-bottom: rem(52);
+    }
+    // .present__line
+    &__line {
+    }
+    // .present__credit
+    &__credit {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: rem(-25);
+            left: rem(-200);
+            z-index: -1;
+
+            width: rem(789);
+            height: rem(1);
+            background-color: $mainColor;
+        }
+    }
+}
+.credit-present {
+    // .credit-present__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 48, 24);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 25, 15);
+        color: $blue;
+    }
+    // .credit-present__list
+    &__list {
+        @include gridCards(fit, rem(200), 1fr, rem(30));
+
+        @media (max-width:$mobile){
+             gap: rem(15); 
+        }
+    }
+    // .credit-present__item
+    &__item {
+    }
+    // .credit-present__num
+    &__num {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 61, 20);
+        color: $red;
+        span {
+            font-weight: 500;
+            @include adaptiveValue("font-size", 22, 11);
+        }
+    }
+    // .credit-present__text
+    &__text {
+        font-weight: 300;
+        @include adaptiveValue("font-size", 22, 11);
+    }
+    // .credit-present__button
+    &__button {
+        align-self: flex-start;
+    }
+}

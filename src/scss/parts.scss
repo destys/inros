@@ -1,4 +1,6 @@
 .parts {
+    @include adaptiveValue("margin-bottom", 64, 24);
+    
     // .parts__container
     &__container {
         display: grid;

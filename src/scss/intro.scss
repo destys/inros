@@ -1,10 +1,10 @@
 .intro {
     position: relative;
-    min-height: rem(836);
+    min-height: 100vh;
     background-size: cover !important;
     @include adaptiveValue("margin-bottom", 106, 30, 1600, 320, 1);
 
-    padding-top: rem(240);
+    @include adaptiveValue("padding-top", 240, 120, 1920, 991, 1);
 
     @media (max-width: $mobile) {
         @include adaptiveValue("padding-top", 240, 120, 767, 479, 1);
