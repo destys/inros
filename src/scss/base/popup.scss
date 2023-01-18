@@ -68,3 +68,17 @@ body::after {
 		visibility: visible;
 	}
 }
+
+.review {
+	.popup {
+		&__content {
+			padding: 0;
+			background-color: transparent;
+
+			iframe {
+				width: 100%;
+				min-height: rem(500);
+			}
+		}
+	}
+}

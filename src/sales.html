@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"О компании"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="sales">
+                <div class="sales__container">
+                    <h1 class="sales__title">Акции компании ИнРОС</h1>
+                    <div class="sales__subtitle">
+                        Все акции действительны до конца месяца. Акции могут суммироваться -
+                        смотрите описание или уточните у оператора по телефону. Мы всегда рады новым и постоянным гостям
+                        как части нашей клиентуры и стремимся предоставить лучшее обслуживание, акции и сезонные
+                        спецпредложения.
+                    </div>
+                    <div class="sales__list">
+                        <div class="sales__item item-sales">
+                            <div class="item-sales__image">
+                                <img data-src="@img/sales1.jpg" alt="">
+                            </div>
+                            <div class="item-sales__content">
+                                <h2 class="item-sales__title">максимальная скидка на остекление до 60%</h2>
+                                <div class="item-sales__subtitle">Акция суммируется с другими</div>
+                                <div class="item-sales__text">Описание: До конца месяца действуют специальные условия
+                                    для новых клиентов. Расчет делается с максимальной скидкой на ПВХ профильОписание:
+                                    До конца месяца действуют специальные условия для новых клиентов. Расчет делается с
+                                    максимальной скидкой на ПВХ профиль</div>
+                                <button type="button" class="item-sales__button button" data-popup="#callback">Заказать
+                                    расчет со скидкой</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

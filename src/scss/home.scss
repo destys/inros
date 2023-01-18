@@ -1,11 +1,28 @@
 //====================================================================================================
 .whywe {
     @include adaptiveValue("margin-bottom", 120, 30);
+    position: relative;
+
+    @media (min-width: $tablet) {
+        padding: rem(30) 0;
+        &::before {
+            content: "";
+            width: rem(450);
+            height: 100%;
+
+            background: #f2f2f2;
+            opacity: 0.5;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
 
     // .whywe__container
     &__container {
-
-        @media (min-width:em(1367)) {
+        @media (min-width: em(1367)) {
             display: flex;
             align-items: center;
             gap: rem(145);
@@ -17,7 +34,7 @@
     &__content {
         max-width: rem(540);
 
-        @media (max-width:em(1367)) {
+        @media (max-width: em(1367)) {
             margin-bottom: rem(30);
         }
     }
@@ -29,7 +46,7 @@
         @include adaptiveValue("font-size", 30, 13);
         text-transform: uppercase;
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             text-align: center;
         }
     }
@@ -39,7 +56,7 @@
         font-weight: 300;
         @include adaptiveValue("font-size", 21, 10);
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             text-align: center;
         }
     }
@@ -48,7 +65,7 @@
     &__list {
         @include gridCards(fit, rem(300), 1fr, rem(40));
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             gap: rem(15);
         }
     }
@@ -61,7 +78,7 @@
 
         @include adaptiveValue("font-size", 19, 10);
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             flex-direction: column;
             text-align: center;
         }
@@ -69,7 +86,6 @@
 }
 
 .item-whywe {
-
     // .item-whywe__icon
     &__icon {
         display: flex;
@@ -88,7 +104,7 @@
 .nums {
     margin-bottom: rem(30);
 
-    @media (min-width:$tablet) {
+    @media (min-width: $tablet) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         @include adaptiveValue("gap", 140, 20, 1600, 1366, 1);
@@ -99,7 +115,7 @@
         flex: 0 0 40%;
         position: relative;
 
-        @media (max-width:$tablet) {
+        @media (max-width: $tablet) {
             margin-bottom: rem(24);
 
             img {
@@ -114,14 +130,13 @@
 
     // .nums__content
     &__content {
-        @media (max-width:$tablet) {
+        @media (max-width: $tablet) {
             padding: 0 rem(15);
         }
     }
 }
 
 .image-nums {
-
     // .image-nums__content
     &__content {
         position: absolute;
@@ -130,7 +145,7 @@
         padding: rem(30);
         background-color: #fff;
 
-        @media (min-width:em(1367)) {
+        @media (min-width: em(1367)) {
             padding: rem(50) rem(80);
         }
     }
@@ -151,12 +166,10 @@
 }
 
 .content-nums {
-
     // .content-nums__top
     &__top {
         display: flex;
         @include adaptiveValue("gap", 60, 20);
-
     }
 
     // .content-nums__title
@@ -168,7 +181,7 @@
         @include adaptiveValue("font-size", 30, 16);
         text-transform: uppercase;
 
-        @media (min-width:$mobileSmall) {
+        @media (min-width: $mobileSmall) {
             flex: 0 rem(185);
             min-width: rem(185);
         }
@@ -183,7 +196,7 @@
 
     // .content-nums__item
     &__item {
-        @media (min-width:em(1367)) {
+        @media (min-width: em(1367)) {
             &:not(:last-child) {
                 margin-bottom: rem(29);
             }
@@ -192,7 +205,6 @@
 }
 
 .item-content-nums {
-
     // .item-content-nums__num
     &__num {
         margin-bottom: rem(8);
@@ -229,8 +241,7 @@
 
     // .cases__container
     &__container {
-
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             display: grid;
             grid-template-columns: 1fr 3fr;
             gap: rem(25);
@@ -243,16 +254,18 @@
         text-align: center;
         align-self: center;
 
-        @media (max-width:$tablet) {
+        @media (max-width: $tablet) {
             margin-bottom: rem(24);
         }
     }
 
     // .cases__slider
-    &__slider {}
+    &__slider {
+    }
 
     // .cases__wrapper
-    &__wrapper {}
+    &__wrapper {
+    }
 
     // .cases__slide
     &__slide {
@@ -268,7 +281,6 @@
 }
 
 .header-cases {
-
     // .header-cases__title
     &__title {
         margin-bottom: rem(11);
@@ -298,17 +310,17 @@
     margin-bottom: rem(54);
     padding: rem(15) 0 rem(20);
 
-    @media (min-width:$mobile) {
+    @media (min-width: $mobile) {
         margin-bottom: rem(70);
         padding: rem(33) 0 rem(40);
     }
 
-    @media (min-width:$tablet) {
+    @media (min-width: $tablet) {
         padding: rem(63) 0 rem(80);
     }
 
     &::before {
-        content: '';
+        content: "";
         padding: rem(33) 0 rem(40);
         width: 85%;
         height: 100%;
@@ -318,7 +330,7 @@
         top: 0;
         left: 0;
 
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             width: 52%;
             padding: rem(33) 0 rem(40);
         }
@@ -329,7 +341,7 @@
         position: relative;
         z-index: 1;
 
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             @include adaptiveValue("gap", 155, 30, 1600, 1366, 1);
@@ -347,14 +359,13 @@
         display: flex;
         flex-direction: column;
 
-        @media (max-width:$tablet) {
+        @media (max-width: $tablet) {
             display: none;
         }
     }
 }
 
 .left-faq {
-
     // .left-faq__title
     &__title {
         @include adaptiveValue("margin-bottom", 55, 13);
@@ -365,7 +376,6 @@
 }
 
 .callback-faq {
-
     // .callback-faq__title
     &__title {
         @include adaptiveValue("margin-bottom", 24, 6);
@@ -397,7 +407,7 @@
             }
 
             &::before {
-                content: '';
+                content: "";
                 display: block;
                 width: rem(10);
                 flex: 0 0 rem(10);
@@ -417,7 +427,7 @@
         align-items: center;
         gap: rem(20);
 
-        margin-top: auto;
+        margin-top: rem(40);
     }
 
     // .callback-faq__button

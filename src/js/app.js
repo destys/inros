@@ -195,5 +195,6 @@ import "./libs/cubeportfolio.min.js";
 import "./files/cubeportfolio-settings.js";
 import "./files/calc-windows.js";
 import "./files/calc-balcony.js";
+import "./files/custom-scripts.js";
 import "./files/script.js";
 //============================================================================================================================================================================================================================================

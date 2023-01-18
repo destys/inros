@@ -1,170 +1,169 @@
 <section class="calc" id="calc">
-    <img src="@img/calc/calc_ellipsis.png" alt="img" class="calc__ellipse">
-    <h3 class="title">Калькулятор остекления квартир</h3>
-    <div class="wincalc">
-      <div class="wincalc-type-selector">
-        <p>Тип окна</p>
-        <div class="wincalc-type-selector-one" data-btype="1">
-          <span>Одностворчатое окно</span><br><img src="@img/calc/win-1-t.png">
-        </div>
-        <div class="wincalc-type-selector-one wincalc-type-selector-one-selected" data-btype="2">
-          <span>Двухстворчатое окно</span><br><img src="@img/calc/win-2-t.png">
-        </div>
-        <div class="wincalc-type-selector-one" data-btype="3">
-          <span>Трехстворчатое окно</span><br><img src="@img/calc/win-3-t.png">
-        </div>
-        <div class="wincalc-type-selector-one" data-btype="b">
-          <span>Балконый блок</span><br><img src="@img/calc/win-b-t.png">
-        </div>
+  <img src="@img/calc/calc_ellipsis.png" alt="img" class="calc__ellipse">
+  <h3 class="title">Калькулятор остекления квартир</h3>
+  <div class="wincalc">
+    <div class="wincalc-type-selector">
+      <p>Тип окна</p>
+      <div class="wincalc-type-selector-one" data-btype="1">
+        <span>Одностворчатое окно</span><br><img src="@img/calc/win-1-t.png">
       </div>
-      <div class="wincalc-main-window">
-        <div class="wincalc-main-window-container">
-          <div class="wincalc-constuction">
-            <img src="@img/calc/window-2-frame.jpg">
-          </div>
-          <div class="wincalc-frames" style="transform: scale(1);">
-            <div class="wincalc-frame wincalc-frame-1" style="z-index: 0; opacity: 1;">
-              <div class="wincalc-frame-selector">
-                <div class="wincalc-frame-selector-g">Глухая створка</div>
-                <div class="wincalc-frame-selector-p wincalc-frame-selector-selected">Поворотная створка
-                </div>
-                <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
-              </div>
-              <img src="@img/calc/window-s.png"
-                style="opacity: 1; transform: perspective(800px) rotateY(0deg);">
-            </div>
-            <div class="wincalc-frame wincalc-frame-2" style="z-index: 0; opacity: 1;">
-              <div class="wincalc-frame-selector">
-                <div class="wincalc-frame-selector-g wincalc-frame-selector-selected">Глухая створка</div>
-                <div class="wincalc-frame-selector-p">Поворотная створка</div>
-                <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
-              </div>
-              <img src="@img/calc/window-s2.png" style="opacity: 0;">
-            </div>
-            <div class="wincalc-frame wincalc-frame-3" style="z-index: 1; opacity: 0;">
-              <div class="wincalc-frame-selector">
-                <div class="wincalc-frame-selector-g">Глухая створка</div>
-                <div class="wincalc-frame-selector-p wincalc-frame-selector-selected">Поворотная створка
-                </div>
-                <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
-              </div>
-              <img src="@img/calc/window-s.png"
-                style="opacity: 1; transform: perspective(800px) rotateY(0deg);">
-            </div>
-          </div>
-          <div class="meter_vertical">
-            <form onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false"
-              oninput="if (!window.__cfRLUnblockHandlers) return false; levelheight.value = mheight.valueAsNumber"
-              data-cf-modified-12fae3f1188bd6d13850f3ec-="">
-              <output for="m-height" name="levelheight" id="levelheight">1500</output>
-              <input class="meter" id="m-height" name="mheight" type="range" min="500" max="2400" value="1500"
-                step="1" />
-            </form>
-          </div>
-          <div class="meter_horisontal">
-            <form onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false"
-              oninput="if (!window.__cfRLUnblockHandlers) return false; level.value = mwidth.valueAsNumber"
-              data-cf-modified-12fae3f1188bd6d13850f3ec-="">
-              <output for="m-width" name="level" id="level">1400</output>
-              <input class="meter" id="m-width" name="mwidth" type="range" min="1000" max="1600" value="1400"
-                step="1" />
-            </form>
-          </div>
-        </div>
+      <div class="wincalc-type-selector-one wincalc-type-selector-one-selected" data-btype="2">
+        <span>Двухстворчатое окно</span><br><img src="@img/calc/win-2-t.png">
       </div>
-      <div class="wincalc-group-selector">
-        <div class="wincalc-type2-selector">
-          <p>Тип профиля</p>
-
-          <div>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p1" checked="checked"
-              id="wincalc-type2-selector-1">
-            <label for="wincalc-type2-selector-1">REHAU Blitz 60</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p2" id="wincalc-type2-selector-2">
-            <label for="wincalc-type2-selector-2">REHAU Thermo 60</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p3" id="wincalc-type2-selector-3">
-            <label for="wincalc-type2-selector-3">REHAU Brillant 70</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p4" id="wincalc-type2-selector-4">
-            <label for="wincalc-type2-selector-4">REHAU Grazio 70</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p5" id="wincalc-type2-selector-5">
-            <label for="wincalc-type2-selector-5">REHAU Delight 70</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p6" id="wincalc-type2-selector-6">
-            <label for="wincalc-type2-selector-6">REHAU Intelio 80</label>
-            <input type="radio" name="wincalc-type2-selector" data-btype2="p7" id="wincalc-type2-selector-7">
-            <label for="wincalc-type2-selector-7">REHAU Geneo 86</label>
-          </div>
-        </div>
-        <div class="wincalc-size-selector">
-          <div class="block-items-wrapper">
-            <div>Ширина<br><input type="text" id="wincalc-size-selector-x"
-                oninput="if (!window.__cfRLUnblockHandlers) return false; fun1()" value="1400"
-                data-cf-modified-12fae3f1188bd6d13850f3ec-=""></div>
-            <div>Высота<br><input type="text" id="wincalc-size-selector-y"
-                oninput="if (!window.__cfRLUnblockHandlers) return false; fun2()" value="1500"
-                data-cf-modified-12fae3f1188bd6d13850f3ec-=""></div>
-          </div>
-        </div>
-        <div class="wincalc-options">
-          <div class="block-items-float"><input type="checkbox" id="wincalc-options-1"><label
-              for="wincalc-options-1">Монтаж</label>
-          </div>
-          <div class="block-items-float"><input type="checkbox" id="wincalc-options-2"><label
-              for="wincalc-options-2">Подоконник</label>
-          </div>
-          <div class="block-items-float"><input type="checkbox" id="wincalc-options-3"><label
-              for="wincalc-options-3">Отлив</label>
-          </div>
-          <div class="block-items-float"><input type="checkbox" id="wincalc-options-4"><label
-              for="wincalc-options-4">Откосы</label>
-          </div>
-          <div class="block-items-clear"><input type="checkbox" id="wincalc-options-5"><label
-              for="wincalc-options-5">Москитная сетка</label>
-          </div>
-        </div>
+      <div class="wincalc-type-selector-one" data-btype="3">
+        <span>Трехстворчатое окно</span><br><img src="@img/calc/win-3-t.png">
       </div>
-      <div class="wincalc-price">
-        <div class="wincalc-price-title">Расчёт с учётом скидки 60 %</div>
-        <div class="wincalc-price-text">
-          <p>Хотите зафиксировать персональную <span>скидку на 30 дней?</span></p>
+      <div class="wincalc-type-selector-one" data-btype="b">
+        <span>Балконый блок</span><br><img src="@img/calc/win-b-t.png">
+      </div>
+    </div>
+    <div class="wincalc-main-window">
+      <div class="wincalc-main-window-container">
+        <div class="wincalc-constuction">
+          <img src="@img/calc/window-2-frame.jpg">
         </div>
-        <div class="wincalc-price-sum">Сумма от <span class="wincalc-price-value">0</span>р</div>
-        <div class="wincalc-price-field">
-          <div role="form" class="wpcf7" id="wpcf7-f150-o8" lang="ru-RU" dir="ltr">
-            <div class="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
+        <div class="wincalc-frames" style="transform: scale(1);">
+          <div class="wincalc-frame wincalc-frame-1" style="z-index: 0; opacity: 1;">
+            <div class="wincalc-frame-selector">
+              <div class="wincalc-frame-selector-g">Глухая створка</div>
+              <div class="wincalc-frame-selector-p wincalc-frame-selector-selected">Поворотная створка
+              </div>
+              <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
             </div>
-            <form action="okna.html#wpcf7-f150-o8" method="post" class="wpcf7-form init" novalidate="novalidate"
-              data-status="init">
-              <div style="display: none;">
-                <input type="hidden" name="_wpcf7" value="150" />
-                <input type="hidden" name="_wpcf7_version" value="5.4" />
-                <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
-                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f150-o8" />
-                <input type="hidden" name="_wpcf7_container_post" value="0" />
-                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-              </div>
-              <p><span class="wpcf7-form-control-wrap text-749"><input type="text" name="text-749" value="" size="40"
-                    class="wpcf7-form-control wpcf7-text" id="calc_price_form" aria-invalid="false" /></span></p>
-              <div class="discount-field-tel">
-                <span class="wpcf7-form-control-wrap tel-811"><input type="tel" name="tel-811" value="" size="40"
-                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-tel"
-                    aria-required="true" aria-invalid="false" placeholder="Ваш телефон" /></span>
-              </div>
-              <div class="discount-field-btn btn btn-red">
-                <input type="submit" value="Получить смс" class="wpcf7-form-control wpcf7-submit" /></p>
-                <p>Ваше предложение действует <span>1 д. 12 ч.</span></p>
-              </div>
-              <p><span class="wpcf7-form-control-wrap invert-agree"><span
-                    class="wpcf7-form-control wpcf7-acceptance invert"><span class="wpcf7-list-item"><input
-                        type="checkbox" name="invert-agree" value="1" aria-invalid="false"
-                        class="invert-agree" /></span></span></span></p>
-              <input type='hidden' class='wpcf7-pum'
-                value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
-              <div class="wpcf7-response-output" aria-hidden="true"></div>
-            </form>
+            <img src="@img/calc/window-s.png" style="opacity: 1; transform: perspective(800px) rotateY(0deg);">
           </div>
+          <div class="wincalc-frame wincalc-frame-2" style="z-index: 0; opacity: 1;">
+            <div class="wincalc-frame-selector">
+              <div class="wincalc-frame-selector-g wincalc-frame-selector-selected">Глухая створка</div>
+              <div class="wincalc-frame-selector-p">Поворотная створка</div>
+              <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
+            </div>
+            <img src="@img/calc/window-s2.png" style="opacity: 0;">
+          </div>
+          <div class="wincalc-frame wincalc-frame-3" style="z-index: 1; opacity: 0;">
+            <div class="wincalc-frame-selector">
+              <div class="wincalc-frame-selector-g">Глухая створка</div>
+              <div class="wincalc-frame-selector-p wincalc-frame-selector-selected">Поворотная створка
+              </div>
+              <div class="wincalc-frame-selector-o">Поворотно-откидная створка</div>
+            </div>
+            <img src="@img/calc/window-s.png" style="opacity: 1; transform: perspective(800px) rotateY(0deg);">
+          </div>
+        </div>
+        <div class="meter_vertical">
+          <form onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false"
+            oninput="if (!window.__cfRLUnblockHandlers) return false; levelheight.value = mheight.valueAsNumber"
+            data-cf-modified-12fae3f1188bd6d13850f3ec-="">
+            <output for="m-height" name="levelheight" id="levelheight">1500</output>
+            <input class="meter" id="m-height" name="mheight" type="range" min="500" max="2400" value="1500" step="1" />
+          </form>
+        </div>
+        <div class="meter_horisontal">
+          <form onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false"
+            oninput="if (!window.__cfRLUnblockHandlers) return false; level.value = mwidth.valueAsNumber"
+            data-cf-modified-12fae3f1188bd6d13850f3ec-="">
+            <output for="m-width" name="level" id="level">1400</output>
+            <input class="meter" id="m-width" name="mwidth" type="range" min="1000" max="1600" value="1400" step="1" />
+          </form>
         </div>
       </div>
     </div>
-  </section>
+    <div class="wincalc-group-selector">
+      <div class="wincalc-type2-selector">
+        <p>Тип профиля</p>
+
+        <div>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p1" checked="checked"
+            id="wincalc-type2-selector-1">
+          <label for="wincalc-type2-selector-1">REHAU Blitz 60</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p2" id="wincalc-type2-selector-2">
+          <label for="wincalc-type2-selector-2">REHAU Thermo 60</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p3" id="wincalc-type2-selector-3">
+          <label for="wincalc-type2-selector-3">REHAU Brillant 70</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p4" id="wincalc-type2-selector-4">
+          <label for="wincalc-type2-selector-4">REHAU Grazio 70</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p5" id="wincalc-type2-selector-5">
+          <label for="wincalc-type2-selector-5">REHAU Delight 70</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p6" id="wincalc-type2-selector-6">
+          <label for="wincalc-type2-selector-6">REHAU Intelio 80</label>
+          <input type="radio" name="wincalc-type2-selector" data-btype2="p7" id="wincalc-type2-selector-7">
+          <label for="wincalc-type2-selector-7">REHAU Geneo 86</label>
+        </div>
+      </div>
+      <div class="wincalc-size-selector">
+        <div class="block-items-wrapper">
+          <div>Ширина<br><input type="text" id="wincalc-size-selector-x"
+              oninput="if (!window.__cfRLUnblockHandlers) return false; fun1()" value="1400"
+              data-cf-modified-12fae3f1188bd6d13850f3ec-=""></div>
+          <div>Высота<br><input type="text" id="wincalc-size-selector-y"
+              oninput="if (!window.__cfRLUnblockHandlers) return false; fun2()" value="1500"
+              data-cf-modified-12fae3f1188bd6d13850f3ec-=""></div>
+        </div>
+      </div>
+      <div class="wincalc-options">
+        <div class="block-items-float"><input type="checkbox" id="wincalc-options-1"><label
+            for="wincalc-options-1">Монтаж</label>
+        </div>
+        <div class="block-items-float"><input type="checkbox" id="wincalc-options-2"><label
+            for="wincalc-options-2">Подоконник</label>
+        </div>
+        <div class="block-items-float"><input type="checkbox" id="wincalc-options-3"><label
+            for="wincalc-options-3">Отлив</label>
+        </div>
+        <div class="block-items-float"><input type="checkbox" id="wincalc-options-4"><label
+            for="wincalc-options-4">Откосы</label>
+        </div>
+        <div class="block-items-clear"><input type="checkbox" id="wincalc-options-5"><label
+            for="wincalc-options-5">Москитная сетка</label>
+        </div>
+      </div>
+    </div>
+    <div class="wincalc-price">
+      <div class="wincalc-price-title">Расчёт с учётом скидки 60 %</div>
+      <div class="wincalc-price-text">
+        <p>Хотите зафиксировать персональную <span>скидку на 30 дней?</span></p>
+      </div>
+      <div class="wincalc-price-sum">Сумма от <span class="wincalc-price-value">0</span>р</div>
+      <div class="wincalc-price-field">
+        <div role="form" class="wpcf7" id="wpcf7-f150-o8" lang="ru-RU" dir="ltr">
+          <div class="screen-reader-response">
+            <p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="okna.html#wpcf7-f150-o8" method="post" class="wpcf7-form init" novalidate="novalidate"
+            data-status="init">
+            <div style="display: none;">
+              <input type="hidden" name="_wpcf7" value="150" />
+              <input type="hidden" name="_wpcf7_version" value="5.4" />
+              <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f150-o8" />
+              <input type="hidden" name="_wpcf7_container_post" value="0" />
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+            </div>
+            <p>
+              <span class="wpcf7-form-control-wrap text-749"><input type="text" name="text-749" value="" size="40"
+                  class="wpcf7-form-control wpcf7-text" id="calc_price_form" aria-invalid="false" /></span></p>
+              <div class="discount-field-tel">
+              <span class="wpcf7-form-control-wrap tel-811"><input type="tel" name="tel-811" value="" size="40"
+                  class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-tel validation-tel"
+                  aria-required="true" aria-invalid="false" placeholder="Ваш телефон" /></span>
+            </div>
+            <div class="discount-field-btn btn btn-red">
+              <input type="submit" value="Получить смс" class="wpcf7-form-control wpcf7-submit validation-btn"
+                disabled />
+              <p style="font-size: 8px; color: red; margin-bottom: 5px;">Проверьте корректность ввода номера</p>
+              <p>Ваше предложение действует <span>1 д. 12 ч.</span></p>
+            </div>
+            <p><span class="wpcf7-form-control-wrap invert-agree"><span
+                  class="wpcf7-form-control wpcf7-acceptance invert"><span class="wpcf7-list-item"><input
+                      type="checkbox" name="invert-agree" value="1" aria-invalid="false"
+                      class="invert-agree" /></span></span></span></p>
+            <input type='hidden' class='wpcf7-pum'
+              value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

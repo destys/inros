@@ -1,5 +1,5 @@
 .parts {
-    @include adaptiveValue("margin-bottom", 64, 24);
+    @include adaptiveValue("margin-bottom", 124, 24);
     
     // .parts__container
     &__container {

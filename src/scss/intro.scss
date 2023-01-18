@@ -49,7 +49,6 @@
         @include adaptiveValue("left", 666, 350, 1920, 1366, 1);
         bottom: 0;
         z-index: 3;
-        background: url("@img/window.png") 0 0 no-repeat;
         width: rem(727);
         height: rem(641);
 

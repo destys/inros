@@ -1,5 +1,4 @@
 .gazebo {
-
     // .gazebo__glazing
     &__glazing {
         display: flex;
@@ -7,7 +6,7 @@
         margin: 0 rem(15);
         @include adaptiveValue("margin-bottom", 80, 24);
 
-        @media (min-width:$pc) {
+        @media (min-width: $pc) {
             @include adaptiveValue("margin-right", 160, 15, 1920, 1600, 1);
             margin-left: 0;
 
@@ -18,12 +17,12 @@
             }
         }
 
-        @media (max-width:$pc) {
+        @media (max-width: $pc) {
             margin: 0 rem(15);
             @include adaptiveValue("margin-bottom", 80, 24);
         }
 
-        @media (max-width:$tablet) {
+        @media (max-width: $tablet) {
             flex-direction: column !important;
         }
     }
@@ -33,18 +32,15 @@
         @include adaptiveValue("margin-bottom", 64, 24);
     }
 
-
     // .gazebo__future
     &__future {
         @include adaptiveValue("margin-bottom", 90, 30);
     }
 
-
     // .gazebo__maxsale
     &__maxsale {
         @include adaptiveValue("margin-bottom", 75, 24);
     }
-
 
     // .gazebo__zero
     &__zero {
@@ -60,11 +56,9 @@
 //========================================================================================================================================================
 
 .glazing-gazebo {
-
     // .glazing-gazebo__image
     &__image {
-
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             flex: 0 0 rem(680);
             @include adaptiveValue("flex-basis", 680, 300);
         }
@@ -75,7 +69,7 @@
             max-height: rem(450);
             object-fit: contain;
 
-            @media (min-width:$tablet) {
+            @media (min-width: $tablet) {
                 max-height: none;
                 object-fit: cover;
             }
@@ -84,7 +78,7 @@
 
     // .glazing-gazebo__content
     &__content {
-        flex: 1 1 auto
+        flex: 1 1 auto;
     }
 
     // .glazing-gazebo__top
@@ -92,6 +86,23 @@
         @include adaptiveValue("padding-bottom", 33, 10);
         @include adaptiveValue("padding-left", 137, 10, 1920, 1366, 1);
         border-bottom: 1px solid $blue;
+    }
+
+    // .glazing-gazebo__section-title
+    &__section-title {
+        @include adaptiveValue("margin-bottom", 57, 24);
+        @include adaptiveValue("padding-bottom", 39, 21);
+        border-bottom: 1px solid $mainColor;
+        text-align: center;
+
+        h2 {
+            margin: 0 auto;
+            max-width: rem(800);
+            font-weight: 700;
+            @include adaptiveValue("font-size", 30, 15);
+            text-transform: uppercase;
+            text-align: center;
+        }
     }
 
     // .glazing-gazebo__title
@@ -134,7 +145,6 @@
         @include adaptiveValue("padding-left", 137, 10, 1920, 1366, 1);
 
         & .form {
-
             // .form__title
             &__title {
                 @include adaptiveValue("margin-bottom", 21, 10);
@@ -149,7 +159,7 @@
                 flex-direction: column;
                 gap: rem(8);
 
-                @media (min-width:$mobileSmall) {
+                @media (min-width: $mobileSmall) {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: rem(20);
@@ -159,7 +169,7 @@
                     height: rem(34);
                     @include adaptiveValue("font-size", 19, 10);
 
-                    @media (min-width:$mobileSmall) {
+                    @media (min-width: $mobileSmall) {
                         height: rem(51);
                     }
                 }
@@ -167,7 +177,7 @@
                 .button {
                     height: rem(34);
 
-                    @media (min-width:$mobileSmall) {
+                    @media (min-width: $mobileSmall) {
                         height: rem(51);
                     }
                 }
@@ -185,7 +195,6 @@
 //========================================================================================================================================================
 
 .types-gazebo {
-
     // .types-gazebo__header
     &__header {
         margin-bottom: rem(12);
@@ -203,7 +212,7 @@
         @include adaptiveValue("margin-bottom", 40, 15);
         @include adaptiveValue("padding-bottom", 10, 5);
 
-        @media (max-width:$mobileSmall) {
+        @media (max-width: $mobileSmall) {
             overflow-x: auto;
             justify-content: flex-start;
         }
@@ -218,9 +227,9 @@
         @include adaptiveValue("font-size", 18, 9);
         border: 1px solid transparent;
 
-        transition: opacity .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
+        transition: opacity 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             @include adaptiveValue("padding", 17, 6);
         }
 
@@ -237,13 +246,14 @@
     }
 
     // .types-gazebo__body
-    &__body {}
+    &__body {
+    }
 }
 
 .header-types-gazebo {
-
     // .header-types-gazebo__container
-    &__container {}
+    &__container {
+    }
 
     // .header-types-gazebo__title
     &__title {
@@ -257,7 +267,6 @@
 }
 
 .body-types-gazebo {
-
     // .body-types-gazebo__container
     &__container {
         display: flex;
@@ -280,7 +289,6 @@
         align-items: center;
 
         & .form {
-
             // .form__title
             &__title {
                 @include adaptiveValue("margin-bottom", 21, 10);
@@ -295,7 +303,7 @@
                 flex-direction: column;
                 gap: rem(8);
 
-                @media (min-width:$mobileSmall) {
+                @media (min-width: $mobileSmall) {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: rem(20);
@@ -305,7 +313,7 @@
                     height: rem(34);
                     @include adaptiveValue("font-size", 19, 10);
 
-                    @media (min-width:$mobileSmall) {
+                    @media (min-width: $mobileSmall) {
                         height: rem(51);
                     }
                 }
@@ -313,7 +321,7 @@
                 .button {
                     height: rem(34);
 
-                    @media (min-width:$mobileSmall) {
+                    @media (min-width: $mobileSmall) {
                         height: rem(51);
                     }
                 }
@@ -336,21 +344,21 @@
 }
 
 .cat-types-gazebo {
-
     // .cat-types-gazebo__container
-    &__container {}
+    &__container {
+    }
 
     // .cat-types-gazebo__list
     &__list {
         display: flex;
         gap: rem(30);
 
-        @media (max-width:em(1366)) {
+        @media (max-width: em(1366)) {
             overflow-x: scroll;
             overflow-y: hidden;
         }
 
-        @media (min-width:$pc) {
+        @media (min-width: $pc) {
             justify-content: center;
         }
     }
@@ -361,7 +369,7 @@
         width: rem(385);
         @include adaptiveValue("padding", 56, 15);
         position: relative;
-        transition: background .2s ease-in-out;
+        transition: background 0.2s ease-in-out;
 
         &:hover {
             background-color: #fff;
@@ -379,14 +387,13 @@
 }
 
 .item-cat-gazebo {
-
     // .item-cat-gazebo__image
     &__image {
         margin-bottom: rem(20);
         height: rem(212);
-        transition: transform .2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
 
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             height: rem(312);
         }
 
@@ -416,7 +423,7 @@
     &__order {
         margin-top: rem(20);
 
-        @media (min-width:$pc) {
+        @media (min-width: $pc) {
             margin-top: 0;
             position: absolute;
             left: 50%;
@@ -424,7 +431,7 @@
             transform: translate(-50%, 0px);
             z-index: -1;
             opacity: 0;
-            transition: opacity .2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
         }
     }
 }
@@ -432,9 +439,9 @@
 //======================================================================================================================================================
 
 .future-gazebo {
-
     // .future-gazebo__container
-    &__container {}
+    &__container {
+    }
 
     // .future-gazebo__title
     &__title {
@@ -447,16 +454,18 @@
         text-align: center;
     }
 
-    // .future-gazebo__content  
+    // .future-gazebo__content
     &__content {
         position: relative;
     }
 
     // .future-gazebo__slider
-    &__slider {}
+    &__slider {
+    }
 
     // .future-gazebo__wrapper
-    &__wrapper {}
+    &__wrapper {
+    }
 
     // .future-gazebo__slide
     &__slide {
@@ -509,9 +518,7 @@
 
 //========================================================================================================================================================
 
-
 .maxsale-gazebo {
-
     // .maxsale-gazebo__container
     &__container {
         display: flex;
@@ -519,14 +526,15 @@
         align-items: center;
         @include adaptiveValue("gap", 159, 20, 1920, 991, 1);
 
-        @media (min-width:$mobileSmall) {
+        @media (min-width: $mobileSmall) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     // .maxsale-gazebo__content
-    &__content {}
+    &__content {
+    }
 
     // .maxsale-gazebo__title
     &__title {
@@ -566,7 +574,6 @@
 //========================================================================================================================================================
 
 .zero-gazebo {
-
     // .zero-gazebo__image
     &__image {
         position: relative;
@@ -592,7 +599,7 @@
             text-shadow: 0px 0px 23px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width:$pc) {
+        @media (max-width: $pc) {
             display: none;
         }
     }
@@ -604,7 +611,7 @@
         @include adaptiveValue("padding-bottom", 80, 20);
         color: #fff;
 
-        @media (max-width:$pc) {
+        @media (max-width: $pc) {
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -636,7 +643,7 @@
         align-items: center;
         @include adaptiveValue("gap", 50, 20);
 
-        @media (min-width:$mobile) {
+        @media (min-width: $mobile) {
             flex-direction: row;
             align-items: flex-start;
         }
@@ -649,7 +656,7 @@
 
     // .zero-gazebo__button
     &__button {
-        @media (min-width:$mobile) {
+        @media (min-width: $mobile) {
             flex: 0 0 rem(295);
         }
     }

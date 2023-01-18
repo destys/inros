@@ -9,6 +9,6 @@ import "inputmask/dist/inputmask.min.js";
 
 const inputMasks = document.querySelectorAll('input[type=tel]');
 if (inputMasks.length > 0) {
-	var im = new Inputmask("+9 (999) 999-99-99");
+	var im = new Inputmask("+7 (999) 999-99-99");
 	im.mask(inputMasks);
 }

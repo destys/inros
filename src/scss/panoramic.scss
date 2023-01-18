@@ -6,7 +6,6 @@
 
     // .panoramic__cat
     &__cat {
-        @include adaptiveValue("margin-bottom", 64, 32);
     }
 
     // .panoramic__add
@@ -164,6 +163,7 @@
 
     // .cat-panoramic__grid
     &__grid {
+        @include adaptiveValue("margin-bottom", 64, 32);
         @include gridCards(fit, rem(300), 1fr, rem(22));
         gap: rem(22);
 
@@ -208,6 +208,12 @@
     &__description {
         @include adaptiveValue("margin-bottom", 32, 8);
         @include adaptiveValue("font-size", 16, 8);
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(15);   
+            }
+        }
     }
 
     // .item-cat-panoramic__footer
