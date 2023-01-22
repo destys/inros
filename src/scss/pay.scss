@@ -1,0 +1,246 @@
+.pay {
+    // .pay__container
+    &__container {
+    }
+    // .pay__online
+    &__online {
+        margin-bottom: rem(38);
+        padding: rem(80) 0;
+        position: relative;
+
+        @media (min-width: $tablet) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: rem(450);
+                height: 100%;
+
+                background: #f2f2f2;
+                opacity: 0.5;
+            }
+        }
+    }
+    // .pay__variants
+    &__variants {
+        @include adaptiveValue("margin-bottom", 120, 54);
+    }
+    // .pay__rules
+    &__rules {
+        @include adaptiveValue("margin-bottom", 120, 60);
+        position: relative;
+    }
+}
+.online-pay {
+    // .online-pay__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    // .online-pay__text
+    &__text {
+        flex: 1 1 67%;
+
+        @media (min-width: $tablet) {
+            flex: 0 0 rem(571);
+        }
+
+        h2 {
+            margin-bottom: rem(33);
+            font-weight: 700;
+            @include adaptiveValue("font-size", 30, 15);
+            text-transform: uppercase;
+        }
+
+        p {
+            font-weight: 300;
+            @include adaptiveValue("font-size", 21, 11);
+        }
+    }
+    // .online-pay__form
+    &__form {
+        display: flex;
+        gap: rem(32);
+        max-width: rem(790);
+
+        .form {
+            // .form__col
+            &__col {
+                flex: 0 0 rem(325);
+
+                .input {
+                    margin-bottom: rem(16);
+                }
+                .button {
+                    margin-top: rem(30);
+                    margin-bottom: rem(16);
+                    width: 100%;
+                }
+
+                textarea {
+                    height: 100%;
+                }
+
+                p {
+                    font-size: rem(11);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.variants-pay {
+    // .variants-pay__title
+    &__title {
+        margin-bottom: rem(10);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 15);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    // .variants-pay__subtitle
+    &__subtitle {
+        margin-bottom: rem(60);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 21, 12);
+        text-align: center;
+        color: $blue;
+    }
+    // .variants-pay__list
+    &__list {
+        @include gridCards("fit", rem(150), 1fr, rem(30));
+
+        @media (min-width: $mobile) {
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 1px solid $blue;
+        }
+    }
+    // .variants-pay__item
+    &__item {
+        padding-bottom: rem(20);
+        position: relative;
+        text-align: center;
+
+        @media (min-width: $mobile) {
+            text-align: left;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: rem(-5);
+                left: 50%;
+                transform: translate(-50%, 0px);
+                width: rem(10);
+                height: rem(10);
+                background-color: $blue;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.rules-pay {
+    // .rules-pay__container
+    &__container {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 129, 30);
+    }
+    // .rules-pay__grid
+    &__grid {
+        display: flex;
+        @include adaptiveValue("gap", 30, 15);
+
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+    }
+    // .rules-pay__col
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 45, 15);
+    }
+    // .rules-pay__item
+    &__item {
+        max-width: rem(460);
+        h3 {
+            margin-bottom: rem(9);
+            font-weight: 500;
+            @include adaptiveValue("font-size", 20, 12);
+            color: $blue;
+        }
+
+        p {
+            @include adaptiveValue("font-size", 15, 9);
+        }
+    }
+    // .rules-pay__right
+    &__right {
+        padding-top: rem(105);
+        padding-bottom: rem(112);
+        padding-left: rem(50);
+        flex: 0 0 rem(424);
+
+        @media (max-width: em(1120)) {
+            display: none;
+        }
+
+        h3 {
+            margin-bottom: rem(33);
+            font-weight: 700;
+            @include adaptiveValue("font-size", 30, 15);
+            text-transform: uppercase;
+            color: #fff;
+
+            @media (min-width: em(1921)) {
+                color: $mainColor;
+            }
+        }
+
+        ul {
+            margin-bottom: rem(60);
+            color: #fff;
+
+            @media (min-width: em(1921)) {
+                color: $mainColor;
+            }
+
+            li {
+                font-weight: 300;
+                @include adaptiveValue("font-size", 22, 11);
+                list-style: inside;
+
+                &:not(:last-child) {
+                    margin-bottom: rem(37);
+                }
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0px, -50%);
+            z-index: -1;
+            width: rem(700);
+            @include adaptiveValue("width", 700, 500, 1920, 1366, 1);
+            height: 120%;
+            background-color: $blue;
+
+            @media (min-width: em(1921)) {
+                content: none;
+            }
+        }
+    }
+}

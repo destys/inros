@@ -11,7 +11,8 @@ import Swiper, {
 	Autoplay,
 	EffectFade,
 	Navigation,
-	Pagination
+	Pagination,
+	Scrollbar
 } from 'swiper';
 /*
 Основниые модули слайдера:
@@ -155,7 +156,7 @@ function initSliders() {
 		new Swiper('.reviews__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Scrollbar],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -225,6 +226,11 @@ function initSliders() {
 					spaceBetween: 30,
 				},
 			},
+
+			scrollbar: {
+				el: '.reviews__scrollbar',
+				draggable: true,
+			  },
 
 			// События
 			on: {

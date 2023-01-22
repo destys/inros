@@ -380,6 +380,7 @@
     margin-bottom: rem(100);
     @include adaptiveValue("margin-bottom", 100, 24);
     position: relative;
+    overflow: hidden;
 
     // .windows-measurer__container
     &__container {
@@ -431,6 +432,10 @@
 
         @media (min-width: $pc) {
             padding: rem(80) rem(130);
+
+            ._credit & {
+                padding: rem(60) rem(130) rem(45);
+            }
         }
     }
 
@@ -449,6 +454,10 @@
 
         @media (min-width: $tablet) {
             padding: rem(80) rem(130) rem(130);
+
+            ._credit & {
+                padding: rem(62) rem(147);
+            }
         }
     }
 
@@ -459,6 +468,10 @@
     // .windows-measurer__item
     &__item {
         @include adaptiveValue("margin-bottom", 40, 15);
+
+        ._credit & {
+            @include adaptiveValue("margin-bottom", 30, 12);
+        }
     }
 
     // .windows-measurer__button

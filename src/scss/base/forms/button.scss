@@ -7,16 +7,35 @@
 	align-items: center;
 	width: rem(250);
 	padding: rem(18) rem(29);
+	border: 1px solid transparent;
 	background-color: $red;
 	color: #fff;
 	@include adaptiveValue("font-size", 15, 9, 767, 320, 1);
 
-	@media (max-width:$mobile) {
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+
+	&:hover {
+		background-color: darken($red, 10);
+	}
+
+	&_transparent {
+		background-color: transparent;
+		border-color: $red;
+		color: $mainColor;
+
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+
+	@media (max-width: $mobile) {
 		padding: rem(10) rem(29);
 	}
 
 	@media (any-hover: hover) {
-		&:hover {}
+		&:hover {
+		}
 	}
 
 	&._fw {

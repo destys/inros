@@ -61,11 +61,15 @@ body::after {
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #fff;
-	padding: 70px 80px;
+	padding: 35px;
 	width: 100%;
 	max-width: 967px;
 	.lock & {
 		visibility: visible;
+	}
+
+	@media (min-width: $mobile) {
+		padding: 70px 80px;
 	}
 }
 

@@ -1,0 +1,116 @@
+.credit {
+    // .credit__rules
+    &__rules {
+        @include adaptiveValue("margin-bottom", 90, 40);
+    }
+    // .credit__banks
+    &__banks {
+        @include adaptiveValue("margin-bottom", 71, 32);
+        @include adaptiveValue("padding-bottom", 71, 32);
+        border-bottom: 1px solid $mainColor;
+    }
+}
+.rules-credit {
+    // .rules-credit__container
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include adaptiveValue("gap", 75, 10, 1920, 991, 1);
+
+        @media (min-width: em(1366)) {
+            grid-template-columns: rem(470) 1fr;
+        }
+    }
+    // .rules-credit__header
+    &__header {
+        margin-bottom: rem(32);
+        text-align: center;
+        @media (min-width: em(1366)) {
+            margin-bottom: 0;
+            @include adaptiveValue("padding-right", 75, 10);
+            border-right: 1px solid $mainColor;
+            text-align: left;
+        }
+    }
+    // .rules-credit__title
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 15);
+        text-transform: uppercase;
+    }
+    // .rules-credit__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+
+        @media (min-width: $mobileSmall) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @media (min-width: $tablet) {
+            @include adaptiveValue("gap", 60, 15, 1920, 991, 1);
+        }
+    }
+    // .rules-credit__item
+    &__item {
+        flex: 0 0 30%;
+    }
+}
+.item-rules-credit {
+    // .item-rules-credit__title
+    &__title {
+        margin-bottom: rem(16);
+        font-weight: 500;
+        color: $blue;
+        @include adaptiveValue("font-size", 22, 12);
+    }
+    // .item-rules-credit__text
+    &__text {
+        @include adaptiveValue("font-size", 16, 10);
+    }
+}
+.banks-credit {
+    // .banks-credit__container
+    &__container {
+    }
+    // .banks-credit__title
+    &__title {
+        margin-bottom: rem(41);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 15);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    // .banks-credit__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(15);
+
+        @media (min-width: $mobileSmall) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    // .banks-credit__item
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: rem(200);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media (min-width:$mobileSmall){
+             max-width: none; 
+        }
+    }
+}

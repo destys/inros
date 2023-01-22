@@ -10,6 +10,7 @@
 		left: 0;
 		z-index: 100;
 		width: 100%;
+		background: rgba(255,255,255,0.9);
 	}
 
 	// .header__container
@@ -98,10 +99,10 @@
 				align-items: center;
 				gap: rem(10);
 				position: absolute;
-				bottom: rem(-49);
+				bottom: rem(-48);
 				left: 0;
 				width: 100%;
-				background-color: #fff;
+				background-color: rgba(#fff, 0.9) !important;
 				min-height: rem(48);
 
 				opacity: 0;
@@ -374,7 +375,6 @@
 //========================================================================================================================================================
 
 .menu-tabs {
-
 	// .menu-tabs__navigation
 	&__navigation {
 		display: flex;
@@ -399,11 +399,10 @@
 	}
 	// .menu-tabs__body
 	&__body {
-
 		.menu {
 			// .menu__body
 			&__body {
-				&:last-child{
+				&:last-child {
 					margin-top: rem(50);
 				}
 			}

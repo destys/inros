@@ -1,11 +1,10 @@
 .cottage {
-
     // .cottage__adv
     &__adv {
         @include adaptiveValue("margin-bottom", 111, 28);
         padding: 0 rem(15);
 
-        @media (min-width:em(1120)) {
+        @media (min-width: em(1120)) {
             display: grid;
             grid-template-columns: rem(680) 1fr;
             gap: rem(20);
@@ -18,7 +17,7 @@
         @include adaptiveValue("margin-bottom", 74, 28);
         @include adaptiveValue("padding-left", 160, 15, 1920, 1600, 1);
 
-        @media (max-width:$pc) {
+        @media (max-width: $pc) {
             padding-right: rem(15);
         }
     }
@@ -26,9 +25,7 @@
 
 //========================================================================================================================================================
 
-
 .adv-cottage {
-
     // .adv-cottage__image
     &__image {
         @media (max-width: em(1120)) {
@@ -96,7 +93,7 @@
         position: relative;
 
         &::before {
-            content: '';
+            content: "";
             width: rem(10);
             height: rem(10);
             background-color: $blue;
@@ -112,11 +109,10 @@
 
 //========================================================================================================================================================
 
-
 .add-cottage {
-
     // .add-cottage__container
-    &__container {}
+    &__container {
+    }
 
     // .add-cottage__title
     &__title {
@@ -138,9 +134,7 @@
         text-align: center;
     }
 
-
     .tabs {
-
         // .tabs__navigation
         &__navigation {
             display: flex;
@@ -153,7 +147,7 @@
             @include adaptiveValue("padding-bottom", 10, 5);
             border-top: 1px solid $mainColor;
 
-            @media (max-width:$mobileSmall) {
+            @media (max-width: $mobileSmall) {
                 overflow-x: auto;
                 justify-content: flex-start;
             }
@@ -167,9 +161,9 @@
             border-color: transparent;
             @include adaptiveValue("font-size", 18, 9);
 
-            transition: opacity .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
+            transition: opacity 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
-            @media (max-width:$mobile) {
+            @media (max-width: $mobile) {
                 @include adaptiveValue("padding", 17, 6);
             }
 
@@ -186,19 +180,20 @@
         }
 
         // .tabs__body
-        &__body {}
+        &__body {
+        }
     }
 }
 
 .body-add-cottage {
-
     // .body-add-cottage__wrapper
     &__wrapper {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: rem(10);
+        @include adaptiveValue("gap", 159, 10);
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             display: flex;
             flex-direction: column-reverse;
         }
@@ -209,7 +204,6 @@
         display: flex;
         flex-direction: column;
         padding-right: rem(10);
-
     }
 
     // .body-add-cottage__title
@@ -248,17 +242,18 @@
             @include adaptiveValue("font-size", 15, 8);
         }
 
-        @media (max-width:$mobileSmall) {
-            line-height: 1; 
+        @media (max-width: $mobileSmall) {
+            line-height: 1;
         }
     }
 
     // .body-add-cottage__button
-    &__button {}
+    &__button {
+    }
 
     // .body-add-cottage__image
     &__image {
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             text-align: center;
         }
 
@@ -267,11 +262,12 @@
             height: 100%;
             object-fit: cover;
 
-            @media (max-width:$mobile) {
+            @media (max-width: $mobile) {
                 max-height: rem(300);
             }
         }
     }
 }
 
-.button {}
+.button {
+}

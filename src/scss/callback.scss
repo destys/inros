@@ -15,7 +15,45 @@
     }
     // .callback__form
     &__form {
-        @include gridCards(fit, rem(300), 1fr, rem(33));
+        @include gridCards(fit, rem(250), 1fr, rem(33));
+
+        @media (min-width: $mobileSmall) {
+            @include gridCards(fit, rem(300), 1fr, rem(33));
+        }
+
+        #credit & {
+            display: block;
+
+            .form {
+                &__row {
+                    @include gridCards(fit, rem(250), 1fr, rem(33));
+                    gap: rem(24) rem(33);
+                    margin-bottom: rem(24);
+
+                    @media (min-width: $mobileSmall) {
+                        @include gridCards(fit, rem(300), 1fr, rem(33));
+                    }
+
+                    input {
+                        margin: 0;
+                    }
+                }
+
+                &__subtitle {
+                    margin: rem(24) 0 rem(13);
+                    font-weight: 500;
+                    color: $blue;
+                }
+            }
+
+            .callback__button {
+                @include gridCards(fit, rem(250), 1fr, rem(33));
+
+                @media (min-width: $mobileSmall) {
+                    @include gridCards(fit, rem(300), 1fr, rem(33));
+                }
+            }
+        }
     }
     // .callback__label
     &__label {

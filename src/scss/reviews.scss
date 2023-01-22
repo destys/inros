@@ -16,11 +16,21 @@
         max-width: rem(1720);
     }
 
+    // .reviews__container 
+
+    &__container {
+        @media (max-width:em(1500)){
+             padding: 0; 
+        }
+    }
+
     // .reviews__left
     &__left {
+        padding: 0 rem(15);
         @include adaptiveValue("margin-bottom", 40, 24);
 
         @media (min-width:em(1500)) {
+            padding: 0;
             margin-bottom: 0;
             max-width: rem(912);
         }
@@ -116,6 +126,37 @@
 
         @media (max-width:em(1500)) {
             padding: rem(30);
+        }
+    }
+
+    // .reviews__scrollbar 
+    &__scrollbar {
+        margin-top: rem(15);
+        position: relative;
+        height: rem(16);
+        background-color: #fff;
+
+        &::before{
+            content:'';
+            width: 100%;
+            height: 1px;
+            background-color: $blue;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0px,-50%);
+        }
+
+        .swiper-scrollbar-drag {
+            width: rem(16) !important;
+            height: rem(16);
+            background-color: $blue;
+            border-radius: 50%;
+        }
+
+        @media (min-width:$tablet){
+             display: none; 
         }
     }
 }
