@@ -197,9 +197,11 @@
 .types-gazebo {
     // .types-gazebo__header
     &__header {
+        margin: 0 auto;
         margin-bottom: rem(12);
         @include adaptiveValue("padding-bottom", 39, 15);
         border-bottom: 1px solid $mainColor;
+        max-width: rem($maxWidthContainer);
     }
 
     // .types-gazebo__navigation
@@ -367,12 +369,17 @@
     &__item {
         flex: 0 0 23%;
         width: rem(385);
-        @include adaptiveValue("padding", 56, 15);
+        padding: rem(25);
         position: relative;
         transition: background 0.2s ease-in-out;
 
         &:hover {
             background-color: #fff;
+
+            .item-windows-catalog__char {
+                height: auto;
+                opacity: 1;
+            }
 
             .item-cat-gazebo__order {
                 opacity: 1;

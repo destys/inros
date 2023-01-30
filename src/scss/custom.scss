@@ -2582,26 +2582,6 @@ button[aria-label="Закрыть"] {
     }
 }
 
-@media screen and (max-width: 359px) {
-    .wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .cites {
-        order: 1;
-        margin-top: 5px;
-    }
-
-    .product-btn.btn.btn-red a {
-        width: 260px;
-    }
-}
-
 .btn-custom {
     width: 280px;
     text-align: center;

@@ -433,6 +433,31 @@ function initSliders() {
 			},
 		});
 	}
+	if (document.querySelector('.delivery-dillers__list')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.delivery-dillers__list', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			autoHeight: false,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

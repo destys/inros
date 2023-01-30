@@ -71,9 +71,9 @@ const quizPrevBtn = document.querySelector('.side-quiz__nav .prev');
 const quizNextBtn = document.querySelector('.side-quiz__next');
 
 if (quizSlides.length && quizNextBtn) {
+    quizNextBtn.classList.add('_disabled');
     quizSlides.forEach(slide => {
         const inputItems = slide.querySelectorAll('.options__item');
-
         inputItems.forEach(inp => {
             inp.addEventListener('click', () => quizNextBtn.classList.remove('_disabled'));
             quizNextBtn.addEventListener('click', () => quizNextBtn.classList.add('_disabled'));
@@ -95,3 +95,28 @@ if (inputTel && calcValidBtn) {
         inputTel.value.includes('_') ? calcValidBtn.disabled = true : calcValidBtn.disabled = false;
     })
 }
+
+//========================================================================================================================================================
+
+// Валидация телефонов и форм
+
+const allForms =document.querySelectorAll('.form');
+
+if (allForms.length) {
+    allForms.forEach(form => {
+        const phoneInput = form.querySelector('input[type=tel]');
+        const submitBtn = form.querySelector('button[type=submit]');
+
+        phoneInput.setAttribute('autocomplete', 'off');
+        submitBtn.disabled = true;
+
+        phoneInput.addEventListener('input', () => {
+            console.log('phoneInput: ', phoneInput.value.length);
+            phoneInput.value.includes('_') ? submitBtn.disabled = true : submitBtn.disabled = false;
+        })
+    })
+}
+
+//========================================================================================================================================================
+
+// 

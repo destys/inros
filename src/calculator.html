@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Калькулятор"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="calculator">
+                <div class="calculator__intro intro-calculator">
+                    <div class="intro-calculator__image">
+                        <img src="@img/calculator/intro-calculator.jpg" alt="">
+                    </div>
+                    <div class="intro-calculator__content">
+                        <h1 class="intro-calculator__title">Калькулятор остекления</h1>
+                        <p class="intro-calculator__text">Выбирая компанию по остеклению, каждый хочет как можно
+                            быстрее узнать конечную стоимость своего заказа. Для быстрого расчета воспользуйтесь
+                            онлайн-калькулятором окон ПВХ, а также для балконов есть отдельный калькулятор на нашем
+                            официальном сайте. Такой подсчет сэкономит Вам время и поможет рассчитать стоимость.
+                            Обращаем Ваше внимание, что калькуляторы выдают стоимость материалов без учета работ,
+                            т.к. почти всегда требуются к стандартной установке еще доп работы. Чтобы узнать
+                            конечную стоимость Вам нужно будет оставить заявку на сайте или уточнять цену у
+                            менеджера по телефону. Чтобы рассчитать цену пластиковых окон, укажите параметры
+                            конструкций. Все поля обязательны для заполнения.
+                        </p>
+                    </div>
+                </div>
+                <div data-tabs class="calculator__tabs">
+                    <nav data-tabs-titles class="tabs__navigation">
+                        <button type="button" class="tabs__title _tab-active">Калькулятор окон</button>
+                        <button type="button" class="tabs__title">Калькулятор остекления балконов</button>
+                    </nav>
+                    <div data-tabs-body class="tabs__content">
+                        <div class="tabs__body">
+                            @@include('html/_calc-windows.htm',{})
+                        </div>
+                        <div class="tabs__body">
+                            @@include('html/_calc.htm',{})
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="calculator__colors colors-calculator">
+                <div class="colors-calculator__container">
+                    <h2 class="colors-calculator__title">Выберите расцветку остекления</h2>
+                    <div class="colors-calculator__text">С помощью ламинированных пластиковых окон можно воссоздать
+                        дизайн, например, для квартир и загородных домов. Воспользуйтесь этой возможностью, чтобы
+                        украсить и подчеркнуть оконные проемы и добавить характер вашему интерьеру. Ламинированная
+                        пленка не только эстетически привлекательна, но и дополнительно защищает профили от износа и
+                        повреждений механического характера, продлив срок службы ПВХ профиля на несколько лет.
+                    </div>
+                    <div class="colors-calculator__list">
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                        <div class="colors-calculator__item">
+                            <img src="@img/calculator/image 312.jpg" alt="">
+                            <p>Коричневый дуб</p>
+                            <p>UQ901</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about__this this-about">
+                <div class="this-about__container">
+                    <h2 class="this-about__title">инрос это ...</h2>
+                    <div class="this-about__list">
+                        <div class="this-about__item item-about-this">
+                            <h3 class="item-about-this__title">Современные технологии</h3>
+                            <div class="item-about-this__subtitle">Современное и автоматизированное производство
+                                окон
+                                ПВХ, и алюминиевых конструкций.</div>
+                        </div>
+                        <div class="this-about__item item-about-this">
+                            <h3 class="item-about-this__title">Уважение клиента</h3>
+                            <div class="item-about-this__subtitle">Наши специалисты помогут в любом вопросе и всегда
+                                пойдут на встречу.
+                                Мы - клиентоориентированная компания
+                            </div>
+                        </div>
+                        <div class="this-about__item item-about-this">
+                            <h3 class="item-about-this__title">Лучшее качество</h3>
+                            <div class="item-about-this__subtitle">Мы используем лучшие материалы, изготавливаем
+                                окна на
+                                лучшем оборудовании, наши специалисты лучшие в отрасли</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

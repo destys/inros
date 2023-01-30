@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Калькулятор"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="contacts">
+                <div class="contacts__container">
+                    <div class="contacts__left left-contacts">
+                        <div class="left-contacts__title">Контакты</div>
+                        <div class="left-contacts__office">
+                            <p><strong>Наш офис</strong></p>
+                            <p>Адрес: Самара, ул. Молодежная, 8б</p>
+                        </div>
+                        <div class="left-contacts__schedule">
+                            <p><strong>Время работы</strong></p>
+                            <p>График</p>
+                            <p>Пн, вт, ср, чт, пт — 9:00-20:00</p>
+                            <p>без перерывов на обед</p>
+                            <p>Сб — 9:00-17:00</p>
+                            <p>Вс — 10:00-16:00</p>
+                            <p><span>(Круглосуточно онлайн консультации и запись на замер)</span></p>
+                        </div>
+                        <div class="left-contacts__email">
+                            <p><strong>Написать нам</strong></p>
+                            <p><span>E-mail: </span><a
+                                    href="mailto:inrosonline+31973@yandex.ru">inrosonline+31973@yandex.ru</a></p>
+                        </div>
+                        <button type="button" class="button" data-popup="#callback">Написать директору</button>
+                    </div>
+                    <div class="contacts__right right-contacts">
+                        <form action="#" class="right-contacts__form form">
+<h2 class="right-contacts__title">ЗАДАТЬ ВОПРОС</h2>
+<div class="right-contacts__subtitle">Пожалуйста, заполните форму ниже:</div>
+<div class="form__row">
+<label for="">
+<p>Как Вас представить?</p>
+<input type="text" name="contacts-name" placeholder="Имя" class="input">
+</label>
+<label for="">
+<p>Телефон</p>
+<input type="tel" name="contacts-name" placeholder="Телефон" class="input">
+</label>
+</div>
+<textarea autocomplete="off" name="form[]" placeholder="Пожалуйста введите Ваше сообщение"
+data-error="Ошибка" class="input"></textarea>
+<div class="form__row">
+<button type="submit" class="button">Отправить</button>
+<p>Нажав кнопку “Отправить” вы даете согласие на обработку Ваших персональных данных</p>
+</div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <div class="contacts__map">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=50.219310%2C53.258734&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDk1NzI4NTk2EkDQoNC%2B0YHRgdC40Y8sINCh0LDQvNCw0YDQsCwg0JzQvtC70L7QtNGR0LbQvdCw0Y8g0YPQu9C40YbQsCwgONCRIgoNk%2BBIQhXxCFVC&z=16.95"
+                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
